@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Orders - House of LUBO | Bespoke Jewelry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #d4af37;
+            --accent: #c19b62;
+            --light: #f8f5f2;
+            --dark: #121212;
+            --text: #333333;
+            --text-light: #777777;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --radius: 12px;
+            --teal: #187A7A;
+            --coral: #E9785D;
+        }
+
+        .dark-theme {
+            --primary: #121212;
+            --secondary: #d4af37;
+            --accent: #c19b62;
+            --light: #1e1e1e;
+            --dark: #0a0a0a;
+            --text: #e0e0e0;
+            --text-light: #aaaaaa;
+            --white: #2a2a2a;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-top {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left span {
+            margin-right: 20px;
+        }
+
+        .header-top-right a {
+            color: var(--white);
+            margin-left: 15px;
+            transition: var(--transition);
+        }
+
+        .header-top-right a:hover {
+            color: var(--secondary);
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 45px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 30px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #e0e0e0;
+            background-color: var(--white);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 2px rgba(24, 122, 122, 0.1);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-bar button:hover {
+            transform: scale(1.05);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-actions button {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .header-actions button:hover {
+            color: var(--teal);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            color: var(--secondary);
+        }
+
+        nav {
+            background-color: var(--white);
+            border-top: 1px solid #f0f0f0;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-links a.active {
+            color: var(--teal);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--teal);
+            color: var(--teal);
+        }
+
+        .btn-outline:hover {
+            background: var(--teal);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Custom Orders Hero */
+        .custom-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            margin-bottom: 80px;
+        }
+
+        .custom-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .custom-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            background-color: var(--white);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            right: -30px;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .step-number {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .step-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--teal);
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Materials Section */
+        .materials-section {
+            background-color: var(--light);
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .material-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .material-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .material-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .material-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .material-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .material-price {
+            font-weight: 700;
+            color: var(--teal);
+            font-size: 1.1rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Consultation Form */
+        .consultation-section {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--coral) 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .consultation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            color: var(--text);
+        }
+
+        .consultation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .consultation-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--teal);
+        }
+
+        .consultation-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .consultation-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--radius);
+            background-color: var(--white);
+            color: var(--text);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(24, 122, 122, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+
+        .file-upload {
+            border: 2px dashed #e0e0e0;
+            border-radius: var(--radius);
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .file-upload:hover {
+            border-color: var(--teal);
+        }
+
+        .file-upload i {
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .file-upload p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .file-upload small {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .budget-range {
+            margin-top: 10px;
+        }
+
+        .budget-value {
+            font-weight: 600;
+            color: var(--teal);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-check-input {
+            margin-top: 5px;
+        }
+
+        .form-check-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .form-check-label a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .form-check-label a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            grid-column: span 2;
+            width: 100%;
+            padding: 18px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--light);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            background-color: var(--white);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-question h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        .faq-answer.active {
+            padding: 30px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: var(--primary);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter .section-title {
+            color: white;
+        }
+
+        .newsletter .section-title::after {
+            background: white;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+            
+            .materials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-cta {
+                display: none;
+            }
+            
+            .header-main .container {
+                flex-wrap: wrap;
+            }
+            
+            .search-bar {
+                order: 3;
+                margin: 15px 0 0;
+                max-width: 100%;
+            }
+            
+            .custom-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .consultation-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            
+            .submit-btn {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .custom-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .consultation-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <span><i class="fas fa-shipping-fast"></i> Free shipping on orders over KES 10,000</span>
+                    <span><i class="fas fa-phone"></i> +254 700 123 456</span>
+                </div>
+                <div class="header-top-right">
+                    <a href="#"><i class="fas fa-user"></i> Account</a>
+                    <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDBDOC45NTQgMCAwIDguOTU0IDAgMjBTOC45NTQgNDAgMjAgNDBTNDAgMzEuMDQ2IDQwIDIwUzMxLjA0NiAwIDIwIDBaIiBmaWxsPSIjMTg3QTdBIi8+CjxwYXRoIGQ9Ik0xMiAxNkwyMCA4TDI4IDE2TDI0IDIwTDI4IDI0TDIwIDMyTDEyIDI0TDE2IDIwTDEyIDE2WiIgZmlsbD0iI0U5Nzg1RCIvPgo8L3N2Zz4K" alt="House of LUBO Logo">
+                    <h1>House of LUBO</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for jewelry, accessories, and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button onclick="window.location.href='profile.html'">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="collections.html">Collections</a>
+                    <a href="jewelry.html">Jewelry</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="clothing.html">Clothing</a>
+                    <a href="new-arrivals.html">New Arrivals</a>
+                    <a href="sale.html">Sale</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <button class="btn btn-outline" onclick="window.location.href='vip.html'">VIP Club</button>
+                    <button class="btn btn-primary" onclick="window.location.href = 'custom.html'">Custom Orders</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Custom Orders Hero -->
+    <section class="custom-hero">
+        <div class="container">
+            <h1>Custom Jewelry</h1>
+            <p>Create a one-of-a-kind piece that tells your unique story with our bespoke jewelry service</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Custom Orders</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Bespoke Process</h2>
+                <p class="section-subtitle">From initial concept to final creation, we guide you through every step of crafting your perfect piece</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>We begin with a detailed discussion to understand your vision, preferences, and the story behind your piece.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="step-icon"><i class="fas fa-pencil-alt"></i></div>
+                    </div>
+                    <h3>Design</h3>
+                    <p>Our master designers create detailed sketches and 3D renderings for your approval before production begins.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="step-icon"><i class="fas fa-gem"></i></div>
+                    </div>
+                    <h3>Craftsmanship</h3>
+                    <p>Expert artisans handcraft your piece using traditional techniques combined with modern precision.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="step-icon"><i class="fas fa-award"></i></div>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>Your finished piece undergoes quality inspection before being carefully packaged and delivered to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="section materials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Materials</h2>
+                <p class="section-subtitle">Choose from our selection of ethically sourced gemstones and precious metals</p>
+            </div>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Diamonds</h3>
+                    <p>Conflict-free diamonds in various cuts and clarities, certified for quality and ethical sourcing.</p>
+                    <div class="material-price">From KES 50,000/carat</div>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Emeralds</h3>
+                    <p>Vibrant Zambian emeralds known for their deep green color and exceptional clarity.</p>
+                    <div class="material-price">From KES 35,000/carat</div>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Sapphires</h3>
+                    <p>Rare Tanzanian sapphires in a spectrum of colors from deep blue to vibrant pink.</p>
+                    <div class="material-price">From KES 28,000/carat</div>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>18K Gold</h3>
+                    <p>Premium 18-karat gold available in yellow, white, and rose variations for lasting beauty.</p>
+                    <div class="material-price">From KES 12,000/gram</div>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Platinum</h3>
+                    <p>Durable and hypoallergenic platinum, perfect for heirloom pieces and daily wear.</p>
+                    <div class="material-price">From KES 8,000/gram</div>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Tanzanite</h3>
+                    <p>Exclusive Tanzanian tanzanite with its unique violet-blue hue, found only in Tanzania.</p>
+                    <div class="material-price">From KES 45,000/carat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent Custom Creations</h2>
+                <p class="section-subtitle">Explore some of our recently completed bespoke jewelry pieces</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Engagement Ring">
+                    <div class="gallery-overlay">
+                        <h3>Art Deco Engagement Ring</h3>
+                        <p>Platinum with 2.5 carat center diamond and sapphire accents</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Necklace">
+                    <div class="gallery-overlay">
+                        <h3>Pearl & Diamond Necklace</h3>
+                        <p>18k gold with South Sea pearls and diamond stations</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Earrings">
+                    <div class="gallery-overlay">
+                        <h3>Emerald Drop Earrings</h3>
+                        <p>18k white gold with Zambian emeralds and diamond accents</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Bracelet">
+                    <div class="gallery-overlay">
+                        <h3>Diamond Tennis Bracelet</h3>
+                        <p>Platinum with 8 carats of brilliant round diamonds</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1582142306909-195724d1a6ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Brooch">
+                    <div class="gallery-overlay">
+                        <h3>Vintage Style Brooch</h3>
+                        <p>18k yellow gold with ruby and diamond floral motif</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Custom Cufflinks">
+                    <div class="gallery-overlay">
+                        <h3>Onyx & Diamond Cufflinks</h3>
+                        <p>Sterling silver with black onyx and pave diamond setting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section class="consultation-section">
+        <div class="container">
+            <div class="consultation-container">
+                <div class="consultation-header">
+                    <h2>Begin Your Custom Journey</h2>
+                    <p>Tell us about your vision and we'll create something extraordinary together</p>
+                </div>
+                <form class="consultation-form" id="customOrderForm">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name *</label>
+                        <input type="text" id="fullName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="pieceType" class="form-label">Type of Piece *</label>
+                        <select id="pieceType" class="form-control form-select" required>
+                            <option value="">Select a type</option>
+                            <option value="engagement">Engagement Ring</option>
+                            <option value="wedding">Wedding Band</option>
+                            <option value="necklace">Necklace</option>
+                            <option value="earrings">Earrings</option>
+                            <option value="bracelet">Bracelet</option>
+                            <option value="pendant">Pendant</option>
+                            <option value="brooch">Brooch</option>
+                            <option value="cufflinks">Cufflinks</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="occasion" class="form-label">Occasion</label>
+                        <input type="text" id="occasion" class="form-control" placeholder="e.g., Engagement, Anniversary, Birthday">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline" class="form-label">Desired Timeline</label>
+                        <select id="timeline" class="form-control form-select">
+                            <option value="">Select timeline</option>
+                            <option value="urgent">1-2 weeks (Urgent)</option>
+                            <option value="standard">3-4 weeks (Standard)</option>
+                            <option value="flexible">5-8 weeks (Flexible)</option>
+                            <option value="extended">8+ weeks (Extended)</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="budget" class="form-label">Budget Range (KES)</label>
+                        <input type="range" id="budget" class="form-control" min="50000" max="1000000" step="50000" value="250000">
+                        <div class="budget-value" id="budgetValue">KES 250,000</div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="description" class="form-label">Describe Your Vision *</label>
+                        <textarea id="description" class="form-control" placeholder="Tell us about your design ideas, inspiration, and any specific requirements..." required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label">Reference Images (Optional)</label>
+                        <div class="file-upload" id="fileUpload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop images or click to browse</p>
+                            <small>JPEG, PNG up to 5MB each</small>
+                        </div>
+                    </div>
+                    <div class="form-check full-width">
+                        <input type="checkbox" id="newsletter" class="form-check-input" checked>
+                        <label for="newsletter" class="form-check-label">I would like to receive updates about my custom order and exclusive offers</label>
+                    </div>
+                    <div class="form-check full-width">
+                        <input type="checkbox" id="agreeTerms" class="form-check-input" required>
+                        <label for="agreeTerms" class="form-check-label">I agree to the <a href="#">Custom Order Terms</a> and understand that a design consultation fee may apply *</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Request Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our custom jewelry process</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does the custom jewelry process take?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline for custom jewelry varies depending on complexity, but typically takes 4-8 weeks from initial consultation to final delivery. Simple designs may be completed in 2-3 weeks, while intricate pieces with multiple gemstones can take 8-12 weeks.</p>
+                        <p>We provide a detailed timeline during your consultation and keep you updated throughout the process with progress photos and regular communication.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your design consultation fee?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We charge a KES 5,000 design consultation fee which is fully credited toward your final purchase. This fee covers the time our master designers spend creating detailed sketches, 3D renderings, and sourcing appropriate materials for your project.</p>
+                        <p>The consultation fee ensures we can dedicate the necessary time and resources to bring your vision to life with the attention to detail it deserves.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use my own gemstones or heirlooms?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we frequently work with client-provided gemstones and heirloom pieces. We begin with a thorough assessment of your materials to ensure they're suitable for the intended design.</p>
+                        <p>Please note that we cannot be responsible for pre-existing damage to client-provided stones, and we recommend insurance for valuable heirlooms during the crafting process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide certificates for gemstones?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our diamonds over 0.5 carats and colored gemstones over 1 carat come with certification from recognized gemological laboratories. We provide full documentation for all precious materials used in your custom piece.</p>
+                        <p>For smaller stones, we provide detailed specifications but may not include formal certification unless specifically requested (additional fees may apply).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your revision policy during the design phase?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We include up to three rounds of revisions in our design process at no additional cost. This allows you to refine the details until you're completely satisfied with the design.</p>
+                        <p>Major conceptual changes after the third revision may incur additional design fees, which we'll discuss transparently before proceeding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Create Something Extraordinary?</h2>
+            <p>Begin your bespoke jewelry journey with our master artisans and create a piece that will be cherished for generations</p>
+            <button class="btn btn-primary" style="background: var(--primary); margin-right: 15px;">Book Consultation</button>
+            <button class="btn btn-outline" style="background: transparent; color: white; border-color: white;">View Portfolio</button>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Stay Inspired</h2>
+                <p class="section-subtitle">Subscribe to receive updates on custom jewelry trends, artisan stories, and exclusive offers</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your email address">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>House of LUBO</h3>
+                    <p>Creating timeless pieces that celebrate elegance and craftsmanship since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Jewelry</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> The Village Market, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                        <p><i class="fas fa-envelope"></i> info@houseoflubo.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM, Sun: 11AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 House of LUBO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Budget Range Slider
+        const budgetSlider = document.getElementById('budget');
+        const budgetValue = document.getElementById('budgetValue');
+        
+        function formatCurrency(amount) {
+            return 'KES ' + amount.toLocaleString();
+        }
+        
+        budgetSlider.addEventListener('input', function() {
+            budgetValue.textContent = formatCurrency(parseInt(this.value));
+        });
+
+        // File Upload
+        const fileUpload = document.getElementById('fileUpload');
+        fileUpload.addEventListener('click', function() {
+            // In a real application, this would trigger a file input
+            alert('File upload functionality would be implemented here');
+        });
+
+        // FAQ Toggle
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle i');
+                
+                // Toggle active class on answer
+                answer.classList.toggle('active');
+                
+                // Rotate toggle icon
+                toggle.classList.toggle('fa-chevron-down');
+                toggle.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Custom Order Form Submission
+        const customOrderForm = document.getElementById('customOrderForm');
+        customOrderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate form
+            const agreeTerms = document.getElementById('agreeTerms');
+            if (!agreeTerms.checked) {
+                alert('Please agree to the Custom Order Terms to continue');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Thank you for your custom order request! Our design team will contact you within 24 hours to schedule your consultation.');
+                customOrderForm.reset();
+                budgetValue.textContent = formatCurrency(250000);
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

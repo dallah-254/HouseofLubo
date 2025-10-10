@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - House of LUBO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #d4af37;
+            --accent: #c19b62;
+            --light: #f8f5f2;
+            --dark: #121212;
+            --text: #333333;
+            --text-light: #777777;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --radius: 12px;
+            --teal: #187A7A;
+            --coral: #E9785D;
+        }
+
+        .dark-theme {
+            --primary: #121212;
+            --secondary: #d4af37;
+            --accent: #c19b62;
+            --light: #1e1e1e;
+            --dark: #0a0a0a;
+            --text: #e0e0e0;
+            --text-light: #aaaaaa;
+            --white: #2a2a2a;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-top {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left span {
+            margin-right: 20px;
+        }
+
+        .header-top-right a {
+            color: var(--white);
+            margin-left: 15px;
+            transition: var(--transition);
+        }
+
+        .header-top-right a:hover {
+            color: var(--secondary);
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 45px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 30px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #e0e0e0;
+            background-color: var(--white);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 2px rgba(24, 122, 122, 0.1);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-bar button:hover {
+            transform: scale(1.05);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-actions button {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .header-actions button:hover {
+            color: var(--teal);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            color: var(--secondary);
+        }
+
+        nav {
+            background-color: var(--white);
+            border-top: 1px solid #f0f0f0;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-links a.active {
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--teal);
+            color: var(--teal);
+        }
+
+        .btn-outline:hover {
+            background: var(--teal);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPgo8L3N2Zz4K') repeat;
+            opacity: 0.2;
+        }
+
+        .page-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary);
+        }
+
+        .breadcrumb span {
+            opacity: 0.7;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            padding: 80px 0;
+        }
+
+        .profile-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+        }
+
+        /* Profile Sidebar */
+        .profile-sidebar {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .profile-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 4px solid var(--light);
+            position: relative;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar-edit {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: var(--teal);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .avatar-edit:hover {
+            background: var(--coral);
+        }
+
+        .profile-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--teal);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .profile-menu {
+            list-style: none;
+        }
+
+        .profile-menu li {
+            margin-bottom: 10px;
+        }
+
+        .profile-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .profile-menu a:hover, .profile-menu a.active {
+            background: rgba(24, 122, 122, 0.1);
+            color: var(--teal);
+        }
+
+        .profile-menu a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Profile Content */
+        .profile-content {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .content-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .content-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .tab-btn {
+            padding: 12px 25px;
+            background: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .tab-btn.active {
+            color: var(--teal);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .tab-btn:hover {
+            color: var(--teal);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Personal Info Form */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            background-color: var(--white);
+            transition: var(--transition);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 2px rgba(24, 122, 122, 0.1);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Order History */
+        .order-card {
+            border: 1px solid #f0f0f0;
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .order-header {
+            background: var(--light);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-id {
+            font-weight: 600;
+        }
+
+        .order-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .order-status {
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-delivered {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+
+        .status-processing {
+            background: rgba(255, 193, 7, 0.1);
+            color: #ffc107;
+        }
+
+        .status-shipped {
+            background: rgba(0, 123, 255, 0.1);
+            color: #007bff;
+        }
+
+        .order-items {
+            padding: 20px;
+        }
+
+        .order-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .order-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .item-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-price {
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        .order-footer {
+            padding: 15px 20px;
+            background: var(--light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-total {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Wishlist */
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .wishlist-item {
+            background: var(--light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .wishlist-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .wishlist-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .wishlist-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .wishlist-item:hover .wishlist-img img {
+            transform: scale(1.05);
+        }
+
+        .wishlist-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .wishlist-action {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-action:hover {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            color: white;
+        }
+
+        .wishlist-details {
+            padding: 20px;
+        }
+
+        .wishlist-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-price {
+            color: var(--teal);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* Address Book */
+        .address-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .address-card {
+            border: 1px solid #e0e0e0;
+            border-radius: var(--radius);
+            padding: 25px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .address-card:hover {
+            border-color: var(--teal);
+        }
+
+        .address-card.default {
+            border-color: var(--teal);
+            background: rgba(24, 122, 122, 0.05);
+        }
+
+        .default-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--teal);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .address-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .address-details {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .address-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .add-address-card {
+            border: 2px dashed #e0e0e0;
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-address-card:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        .add-address-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* VIP Status */
+        .vip-status-card {
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            color: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .vip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .vip-title {
+            font-size: 1.5rem;
+        }
+
+        .vip-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .vip-progress {
+            margin-bottom: 20px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: white;
+            border-radius: 4px;
+            width: 65%;
+        }
+
+        .vip-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefit-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Preferences */
+        .preferences-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .preference-card {
+            border: 1px solid #e0e0e0;
+            border-radius: var(--radius);
+            padding: 25px;
+        }
+
+        .preference-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .preference-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(24, 122, 122, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal);
+            font-size: 1.2rem;
+        }
+
+        .preference-title {
+            font-weight: 600;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--teal);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Security */
+        .security-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .security-item:last-child {
+            border-bottom: none;
+        }
+
+        .security-info h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .security-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .profile-container {
+                grid-template-columns: 280px 1fr;
+            }
+            
+            .wishlist-grid, .address-grid, .preferences-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .profile-sidebar {
+                position: static;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-cta {
+                display: none;
+            }
+            
+            .header-main .container {
+                flex-wrap: wrap;
+            }
+            
+            .search-bar {
+                order: 3;
+                margin: 15px 0 0;
+                max-width: 100%;
+            }
+            
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .wishlist-grid, .address-grid, .preferences-grid, .vip-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profile-content {
+                padding: 25px;
+            }
+            
+            .content-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .tab-btn {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+            }
+            
+            .order-header, .order-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <span><i class="fas fa-shipping-fast"></i> Free shipping on orders over KES 10,000</span>
+                    <span><i class="fas fa-phone"></i> +254 700 123 456</span>
+                </div>
+                <div class="header-top-right">
+                    <a href="login.html"><i class="fas fa-user"></i> Account</a>
+                    <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDBDOC45NTQgMCAwIDguOTU0IDAgMjBTOC45NTQgNDAgMjAgNDBTNDAgMzEuMDQ2IDQwIDIwUzMxLjA0NiAwIDIwIDBaIiBmaWxsPSIjMTg3QTdBIi8+CjxwYXRoIGQ9Ik0xMiAxNkwyMCA4TDI4IDE2TDI0IDIwTDI4IDI0TDIwIDMyTDEyIDI0TDE2IDIwTDEyIDE2WiIgZmlsbD0iI0U5Nzg1RCIvPgo8L3N2Zz4K" alt="House of LUBO Logo">
+                    <h1>House of LUBO</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for jewelry, accessories, and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button onclick="window.location.href='profile.html'">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button onclick="window.location.href = 'cart.html'">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="collections.html">Collections</a>
+                    <a href="jewelry.html">Jewelry</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="clothing.html">Clothing</a>
+                    <a href="new-arrivals.html">New Arrivals</a>
+                    <a href="sale.html">Sale</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <button class="btn btn-outline" onclick="window.location.href = 'vip.html'">VIP Club</button>
+                    <button class="btn btn-primary" onclick="window.location.href = 'custom.html'">Custom Orders</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>My Profile</h1>
+                <p>Manage your account, track orders, and customize your preferences</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="profile.html">My Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-container">
+                <!-- Profile Sidebar -->
+                <div class="profile-sidebar">
+                    <div class="profile-info">
+                        <div class="profile-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Profile Picture">
+                            <div class="avatar-edit">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <h2>Sarah Johnson</h2>
+                        <p>Gold VIP Member</p>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Orders</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">28</span>
+                            <span class="stat-label">Wishlist</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">4</span>
+                            <span class="stat-label">Addresses</span>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="#" class="active" data-tab="personal"><i class="fas fa-user"></i> Personal Information</a></li>
+                        <li><a href="#" data-tab="orders"><i class="fas fa-shopping-bag"></i> Order History</a></li>
+                        <li><a href="#" data-tab="wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                        <li><a href="#" data-tab="addresses"><i class="fas fa-map-marker-alt"></i> Address Book</a></li>
+                        <li><a href="#" data-tab="vip"><i class="fas fa-crown"></i> VIP Status</a></li>
+                        <li><a href="#" data-tab="preferences"><i class="fas fa-cog"></i> Preferences</a></li>
+                        <li><a href="#" data-tab="security"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <div class="content-header">
+                        <h2>Personal Information</h2>
+                        <div class="member-since">
+                            Member since: January 2022
+                        </div>
+                    </div>
+
+                    <div class="content-tabs">
+                        <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                        <button class="tab-btn" data-tab="orders">Orders</button>
+                        <button class="tab-btn" data-tab="wishlist">Wishlist</button>
+                        <button class="tab-btn" data-tab="addresses">Addresses</button>
+                        <button class="tab-btn" data-tab="vip">VIP Status</button>
+                        <button class="tab-btn" data-tab="preferences">Preferences</button>
+                        <button class="tab-btn" data-tab="security">Security</button>
+                    </div>
+
+                    <!-- Personal Information Tab -->
+                    <div class="tab-content active" id="personal-tab">
+                        <form class="personal-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" class="form-control" value="Sarah">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" class="form-control" value="Johnson">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" value="sarah.johnson@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" value="+254 712 345 678">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="birthdate">Date of Birth</label>
+                                    <input type="date" id="birthdate" class="form-control" value="1990-05-15">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="bio">About Me</label>
+                                    <textarea id="bio" class="form-control" rows="4">Luxury fashion enthusiast with a passion for timeless jewelry and elegant accessories. Love exploring new collections and attending exclusive events.</textarea>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-outline">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Order History Tab -->
+                    <div class="tab-content" id="orders-tab">
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div>
+                                    <span class="order-id">Order #LBO-7832</span>
+                                    <span class="order-date">Placed on June 12, 2023</span>
+                                </div>
+                                <span class="order-status status-delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <div class="item-img">
+                                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Diamond Necklace">
+                                    </div>
+                                    <div class="item-details">
+                                        <div class="item-name">Eternal Diamond Necklace</div>
+                                        <div class="item-price">KES 89,500</div>
+                                        <div>Quantity: 1</div>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="item-img">
+                                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Diamond Earrings">
+                                    </div>
+                                    <div class="item-details">
+                                        <div class="item-name">Diamond Stud Earrings</div>
+                                        <div class="item-price">KES 75,000</div>
+                                        <div>Quantity: 1</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">Total: KES 164,500</div>
+                                <div class="order-actions">
+                                    <button class="btn btn-outline">View Details</button>
+                                    <button class="btn btn-primary">Reorder</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div>
+                                    <span class="order-id">Order #LBO-6521</span>
+                                    <span class="order-date">Placed on May 28, 2023</span>
+                                </div>
+                                <span class="order-status status-shipped">Shipped</span>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <div class="item-img">
+                                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Designer Handbag">
+                                    </div>
+                                    <div class="item-details">
+                                        <div class="item-name">LUBO Signature Tote</div>
+                                        <div class="item-price">KES 45,000</div>
+                                        <div>Quantity: 1</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">Total: KES 45,000</div>
+                                <div class="order-actions">
+                                    <button class="btn btn-outline">Track Order</button>
+                                    <button class="btn btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Tab -->
+                    <div class="tab-content" id="wishlist-tab">
+                        <div class="wishlist-grid">
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Evening Gown">
+                                </div>
+                                <div class="wishlist-actions">
+                                    <div class="wishlist-action"><i class="fas fa-shopping-bag"></i></div>
+                                    <div class="wishlist-action"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="wishlist-details">
+                                    <div class="wishlist-name">Evening Gown with Sequins</div>
+                                    <div class="wishlist-price">KES 65,000</div>
+                                    <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Emerald Ring">
+                                </div>
+                                <div class="wishlist-actions">
+                                    <div class="wishlist-action"><i class="fas fa-shopping-bag"></i></div>
+                                    <div class="wishlist-action"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="wishlist-details">
+                                    <div class="wishlist-name">Emerald & Diamond Ring</div>
+                                    <div class="wishlist-price">KES 95,000</div>
+                                    <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="wishlist-item">
+                                <div class="wishlist-img">
+                                    <img src="https://images.unsplash.com/photo-1542280756-74b2f55e73ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Designer Heels">
+                                </div>
+                                <div class="wishlist-actions">
+                                    <div class="wishlist-action"><i class="fas fa-shopping-bag"></i></div>
+                                    <div class="wishlist-action"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="wishlist-details">
+                                    <div class="wishlist-name">Crystal Embellished Heels</div>
+                                    <div class="wishlist-price">KES 38,000</div>
+                                    <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address Book Tab -->
+                    <div class="tab-content" id="addresses-tab">
+                        <div class="address-grid">
+                            <div class="address-card default">
+                                <div class="default-badge">Default</div>
+                                <div class="address-name">Home Address</div>
+                                <div class="address-details">
+                                    Sarah Johnson<br>
+                                    123 Luxury Heights<br>
+                                    Karen, Nairobi 00502<br>
+                                    Kenya<br>
+                                    Phone: +254 712 345 678
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline">Edit</button>
+                                    <button class="btn btn-outline">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-name">Work Address</div>
+                                <div class="address-details">
+                                    Sarah Johnson<br>
+                                    The Village Market, 2nd Floor<br>
+                                    Limuru Road, Nairobi 00621<br>
+                                    Kenya<br>
+                                    Phone: +254 712 345 678
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline">Edit</button>
+                                    <button class="btn btn-outline">Set as Default</button>
+                                    <button class="btn btn-outline">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="add-address-card">
+                                <div class="add-address-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div>Add New Address</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIP Status Tab -->
+                    <div class="tab-content" id="vip-tab">
+                        <div class="vip-status-card">
+                            <div class="vip-header">
+                                <div class="vip-title">Gold VIP Status</div>
+                                <div class="vip-badge">Level 2</div>
+                            </div>
+                            <div class="vip-progress">
+                                <div class="progress-label">
+                                    <span>Current Progress</span>
+                                    <span>KES 125,000 / KES 200,000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <p>Spend KES 75,000 more to reach Platinum VIP status and unlock exclusive benefits!</p>
+                        </div>
+
+                        <h3 style="margin-bottom: 20px;">VIP Benefits</h3>
+                        <div class="vip-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div>15% off all purchases</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div>Free express shipping</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-user-cog"></i>
+                                </div>
+                                <div>Personal stylist (2 sessions/year)</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-star"></i>
+                                </div>
+                                <div>Invitations to select VIP events</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div>Exclusive birthday gift</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-undo-alt"></i>
+                                </div>
+                                <div>Extended return period (60 days)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Tab -->
+                    <div class="tab-content" id="preferences-tab">
+                        <div class="preferences-grid">
+                            <div class="preference-card">
+                                <div class="preference-header">
+                                    <div class="preference-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <div class="preference-title">Email Notifications</div>
+                                        <div>Receive updates about new collections and promotions</div>
+                                    </div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="preference-card">
+                                <div class="preference-header">
+                                    <div class="preference-icon">
+                                        <i class="fas fa-sms"></i>
+                                    </div>
+                                    <div>
+                                        <div class="preference-title">SMS Notifications</div>
+                                        <div>Get order updates via text message</div>
+                                    </div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="preference-card">
+                                <div class="preference-header">
+                                    <div class="preference-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <div>
+                                        <div class="preference-title">Personalized Recommendations</div>
+                                        <div>Get product suggestions based on your preferences</div>
+                                    </div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="preference-card">
+                                <div class="preference-header">
+                                    <div class="preference-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div>
+                                        <div class="preference-title">Show Recently Viewed</div>
+                                        <div>Display recently viewed items on your homepage</div>
+                                    </div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="tab-content" id="security-tab">
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Password</h3>
+                                <p>Last changed 3 months ago</p>
+                            </div>
+                            <button class="btn btn-outline">Change Password</button>
+                        </div>
+
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Two-Factor Authentication</h3>
+                                <p>Add an extra layer of security to your account</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Login Activity</h3>
+                                <p>Last login: Today, 10:23 AM from Nairobi, Kenya</p>
+                            </div>
+                            <button class="btn btn-outline">View All</button>
+                        </div>
+
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Connected Devices</h3>
+                                <p>2 devices currently connected</p>
+                            </div>
+                            <button class="btn btn-outline">Manage</button>
+                        </div>
+
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Close Account</h3>
+                                <p>Permanently delete your account and all data</p>
+                            </div>
+                            <button class="btn btn-outline" style="color: #dc3545; border-color: #dc3545;">Close Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>House of LUBO</h3>
+                    <p>Creating timeless pieces that celebrate elegance and craftsmanship since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="jewelry.html">All Jewelry</a></li>
+                        <li><a href="necklaces.html">Necklaces</a></li>
+                        <li><a href="rings.html">Rings</a></li>
+                        <li><a href="earrings.html">Earrings</a></li>
+                        <li><a href="bracelets.html">Bracelets</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="clothing.html">Clothing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> The Village Market, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                        <p><i class="fas fa-envelope"></i> info@houseoflubo.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM, Sun: 11AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 House of LUBO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Profile Navigation
+        const profileMenuLinks = document.querySelectorAll('.profile-menu a');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        function activateTab(tabId) {
+            // Remove active class from all tabs and buttons
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            tabButtons.forEach(button => button.classList.remove('active'));
+            profileMenuLinks.forEach(link => link.classList.remove('active'));
+
+            // Activate current tab
+            document.getElementById(`${tabId}-tab`).classList.add('active');
+            
+            // Activate corresponding button
+            document.querySelector(`.tab-btn[data-tab="${tabId}"]`).classList.add('active');
+            
+            // Activate corresponding menu link
+            document.querySelector(`.profile-menu a[data-tab="${tabId}"]`).classList.add('active');
+        }
+
+        // Add event listeners to profile menu links
+        profileMenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabId = link.getAttribute('data-tab');
+                activateTab(tabId);
+            });
+        });
+
+        // Add event listeners to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                activateTab(tabId);
+            });
+        });
+
+        // Avatar Edit
+        const avatarEdit = document.querySelector('.avatar-edit');
+        avatarEdit.addEventListener('click', () => {
+            alert('Avatar edit functionality would open a file picker in a real application');
+        });
+
+        // Form Submission
+        const saveButton = document.querySelector('.personal-form .btn-primary');
+        saveButton.addEventListener('click', () => {
+            alert('Profile information saved successfully!');
+        });
+
+        // Toggle Switches
+        const toggleSwitches = document.querySelectorAll('.toggle-switch input');
+        toggleSwitches.forEach(switchEl => {
+            switchEl.addEventListener('change', function() {
+                const action = this.checked ? 'enabled' : 'disabled';
+                const preference = this.closest('.preference-card') ? 
+                    this.closest('.preference-card').querySelector('.preference-title').textContent :
+                    'Two-Factor Authentication';
+                console.log(`${preference} ${action}`);
+            });
+        });
+
+        // Add New Address
+        const addAddressCard = document.querySelector('.add-address-card');
+        addAddressCard.addEventListener('click', () => {
+            alert('Add new address form would open in a real application');
+        });
+
+        // Initialize with personal info tab active
+        activateTab('personal');
+    </script>
+</body>
+</html>

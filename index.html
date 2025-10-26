@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of LUBO - Luxury Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#">
+                        <i class="fas fa-gem"></i>
+                        House of LUBO
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for jewelry, accessories, and more...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-item">
+                        <i class="fas fa-user"></i>
+                        <span class="action-text">Account</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-heart"></i>
+                        <span class="action-text">Wishlist</span>
+                        <span class="wishlist-count">2</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="action-text">Cart</span>
+                        <span class="cart-count">3</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay"></div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button class="mobile-nav-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-section">
+                <h4>Categories</h4>
+                <div class="mobile-nav-item">
+                    <a href="#">Necklaces</a>
+                    <button class="mobile-nav-expand">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="mobile-submenu">
+                    <a href="#">Diamond Necklaces</a>
+                    <a href="#">Gold Necklaces</a>
+                    <a href="#">Pearl Necklaces</a>
+                    <a href="#">Pendant Necklaces</a>
+                </div>
+                
+                <div class="mobile-nav-item">
+                    <a href="#">Rings</a>
+                    <button class="mobile-nav-expand">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="mobile-submenu">
+                    <a href="#">Engagement Rings</a>
+                    <a href="#">Wedding Rings</a>
+                    <a href="#">Statement Rings</a>
+                    <a href="#">Stackable Rings</a>
+                </div>
+                
+                <div class="mobile-nav-item">
+                    <a href="#">Earrings</a>
+                    <button class="mobile-nav-expand">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="mobile-submenu">
+                    <a href="#">Stud Earrings</a>
+                    <a href="#">Hoop Earrings</a>
+                    <a href="#">Drop Earrings</a>
+                    <a href="#">Chandelier Earrings</a>
+                </div>
+                
+                <div class="mobile-nav-item">
+                    <a href="#">Bracelets</a>
+                    <button class="mobile-nav-expand">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="mobile-submenu">
+                    <a href="#">Tennis Bracelets</a>
+                    <a href="#">Bangle Bracelets</a>
+                    <a href="#">Charm Bracelets</a>
+                    <a href="#">Cuff Bracelets</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-section">
+                <h4>Shop</h4>
+                <a href="#" class="mobile-nav-link">New Arrivals</a>
+                <a href="#" class="mobile-nav-link">Best Sellers</a>
+                <a href="#" class="mobile-nav-link">Sale</a>
+                <a href="#" class="mobile-nav-link">Gift Cards</a>
+            </div>
+            
+            <div class="mobile-nav-section">
+                <h4>Account</h4>
+                <a href="#" class="mobile-nav-link">My Account</a>
+                <a href="#" class="mobile-nav-link">Order History</a>
+                <a href="#" class="mobile-nav-link">Wishlist</a>
+                <a href="#" class="mobile-nav-link">Track Order</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">New Arrivals</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Jewelry</h4>
+                                <ul>
+                                    <li><a href="#">Necklaces</a></li>
+                                    <li><a href="#">Rings</a></li>
+                                    <li><a href="#">Earrings</a></li>
+                                    <li><a href="#">Bracelets</a></li>
+                                    <li><a href="#">Watches</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Accessories</h4>
+                                <ul>
+                                    <li><a href="#">Handbags</a></li>
+                                    <li><a href="#">Sunglasses</a></li>
+                                    <li><a href="#">Scarves</a></li>
+                                    <li><a href="#">Belts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Collections</h4>
+                                <ul>
+                                    <li><a href="#">Bridal Collection</a></li>
+                                    <li><a href="#">Luxury Collection</a></li>
+                                    <li><a href="#">Everyday Elegance</a></li>
+                                    <li><a href="#">Statement Pieces</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Necklaces</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>By Type</h4>
+                                <ul>
+                                    <li><a href="#">Pendant Necklaces</a></li>
+                                    <li><a href="#">Choker Necklaces</a></li>
+                                    <li><a href="#">Statement Necklaces</a></li>
+                                    <li><a href="#">Layered Necklaces</a></li>
+                                    <li><a href="#">Pearl Necklaces</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Material</h4>
+                                <ul>
+                                    <li><a href="#">Gold Necklaces</a></li>
+                                    <li><a href="#">Silver Necklaces</a></li>
+                                    <li><a href="#">Diamond Necklaces</a></li>
+                                    <li><a href="#">Gemstone Necklaces</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Length</h4>
+                                <ul>
+                                    <li><a href="#">Choker (14-16")</a></li>
+                                    <li><a href="#">Princess (17-19")</a></li>
+                                    <li><a href="#">Matinee (20-24")</a></li>
+                                    <li><a href="#">Opera (28-34")</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Rings</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>By Type</h4>
+                                <ul>
+                                    <li><a href="#">Engagement Rings</a></li>
+                                    <li><a href="#">Wedding Rings</a></li>
+                                    <li><a href="#">Statement Rings</a></li>
+                                    <li><a href="#">Stackable Rings</a></li>
+                                    <li><a href="#">Cocktail Rings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Material</h4>
+                                <ul>
+                                    <li><a href="#">Gold Rings</a></li>
+                                    <li><a href="#">Silver Rings</a></li>
+                                    <li><a href="#">Platinum Rings</a></li>
+                                    <li><a href="#">Titanium Rings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Stone</h4>
+                                <ul>
+                                    <li><a href="#">Diamond Rings</a></li>
+                                    <li><a href="#">Sapphire Rings</a></li>
+                                    <li><a href="#">Ruby Rings</a></li>
+                                    <li><a href="#">Emerald Rings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Earrings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Bracelets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Watches</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Accessories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sale</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Carousel -->
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-content">
+                            <h2>Eternal Elegance Collection</h2>
+                            <p>Discover our exclusive handcrafted jewelry pieces</p>
+                            <button class="btn btn-primary">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <h2>Luxury Redefined</h2>
+                            <p>Premium selection of diamonds, gold, and precious gemstones</p>
+                            <button class="btn btn-primary">Explore Collection</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <h2>Sparkling Moments</h2>
+                            <p>Find the perfect piece to celebrate life's special moments</p>
+                            <button class="btn btn-primary">View New Arrivals</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-control prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="carousel-control next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="carousel-indicator active"></div>
+                    <div class="carousel-indicator"></div>
+                    <div class="carousel-indicator"></div>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar">
+                    <div class="sidebar-toggle">
+                        <i class="fas fa-filter"></i>
+                        <span>Filters</span>
+                    </div>
+                    
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="filter-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-necklaces" checked>
+                                <label for="category-necklaces">Necklaces</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-rings">
+                                <label for="category-rings">Rings</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-earrings">
+                                <label for="category-earrings">Earrings</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-bracelets">
+                                <label for="category-bracelets">Bracelets</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-watches">
+                                <label for="category-watches">Watches</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" placeholder="Min" value="0">
+                                <span>-</span>
+                                <input type="number" placeholder="Max" value="5000">
+                            </div>
+                            <div class="price-slider">
+                                <div class="slider-track"></div>
+                                <input type="range" class="range-min" min="0" max="10000" value="0">
+                                <input type="range" class="range-max" min="0" max="10000" value="5000">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Material</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="material-gold">
+                                <label for="material-gold">Gold</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="material-silver">
+                                <label for="material-silver">Silver</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="material-platinum">
+                                <label for="material-platinum">Platinum</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="material-diamond">
+                                <label for="material-diamond">Diamond</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating-5">
+                                <label for="rating-5">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                    </div>
+                                    & Up
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating-4">
+                                <label for="rating-4">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    & Up
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating-3">
+                                <label for="rating-3">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    & Up
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-actions">
+                        <button class="btn btn-primary">Apply Filters</button>
+                        <button class="btn btn-secondary">Reset</button>
+                    </div>
+                </aside>
+                
+                <!-- Product Sections -->
+                <div class="product-sections">
+                    <!-- On Demand Section -->
+                    <section class="product-section fade-in">
+                        <div class="section-header">
+                            <h2>On Demand</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        
+                        <div class="products-grid">
+                            <!-- Product Card 1 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge new">New</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Diamond Necklace</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Eternal Diamond Necklace</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star-half-alt filled"></i>
+                                        </div>
+                                        <span class="rating-count">(42)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 89,500</span>
+                                        <span class="original-price">KES 105,000</span>
+                                        <span class="discount">15% OFF</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Card 2 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge hot">Hot</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Gold Ring</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Solitaire Diamond Ring</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="rating-count">(35)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 120,000</span>
+                                        <span class="original-price">KES 150,000</span>
+                                        <span class="discount">20% OFF</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Card 3 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Pearl Earrings</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Pearl Drop Earrings</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                        </div>
+                                        <span class="rating-count">(28)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 65,000</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Card 4 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge deal">Deal</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Gold Bracelet</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Gold Chain Bracelet</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="rating-count">(22)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 55,000</span>
+                                        <span class="original-price">KES 70,000</span>
+                                        <span class="discount">21% OFF</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Card 5 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Luxury Watch</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Diamond Accent Watch</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star-half-alt filled"></i>
+                                        </div>
+                                        <span class="rating-count">(19)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 95,000</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Card 6 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge new">New</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Statement Ring</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Emerald & Diamond Ring</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="rating-count">(15)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 110,000</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile Scroll Version -->
+                        <div class="products-scroll-container">
+                            <div class="products-scroll">
+                                <!-- Same product cards as above but for mobile -->
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="product-badge new">New</div>
+                                        <button class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <span>Diamond Necklace</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-title">Eternal Diamond Necklace</h3>
+                                        <div class="product-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star-half-alt filled"></i>
+                                            </div>
+                                            <span class="rating-count">(42)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="current-price">KES 89,500</span>
+                                            <span class="original-price">KES 105,000</span>
+                                            <span class="discount">15% OFF</span>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="product-badge hot">Hot</div>
+                                        <button class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <span>Gold Ring</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-title">Solitaire Diamond Ring</h3>
+                                        <div class="product-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span class="rating-count">(35)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="current-price">KES 120,000</span>
+                                            <span class="original-price">KES 150,000</span>
+                                            <span class="discount">20% OFF</span>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <button class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <span>Pearl Earrings</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-title">Pearl Drop Earrings</h3>
+                                        <div class="product-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                            </div>
+                                            <span class="rating-count">(28)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="current-price">KES 65,000</span>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="product-badge deal">Deal</div>
+                                        <button class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <span>Gold Bracelet</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-title">Gold Chain Bracelet</h3>
+                                        <div class="product-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="rating-count">(22)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="current-price">KES 55,000</span>
+                                            <span class="original-price">KES 70,000</span>
+                                            <span class="discount">21% OFF</span>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scroll-indicator">
+                                <i class="fas fa-chevron-left"></i>
+                                Scroll for more
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- New Arrivals Section -->
+                    <section class="product-section fade-in">
+                        <div class="section-header">
+                            <h2>New Arrivals</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        
+                        <div class="products-grid">
+                            <!-- Repeat similar product cards for New Arrivals -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge new">New</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Rose Gold Set</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Rose Gold Jewelry Set</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star-half-alt filled"></i>
+                                        </div>
+                                        <span class="rating-count">(12)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 75,000</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more new arrival products -->
+                        </div>
+                    </section>
+                    
+                    <!-- Deals Carousel -->
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-content">
+                                    <h2>Summer Sale</h2>
+                                    <p>Up to 50% off on selected jewelry</p>
+                                    <button class="btn btn-primary">Shop Now</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <h2>Limited Time Offer</h2>
+                                    <p>Buy 2 get 1 free on all earrings</p>
+                                    <button class="btn btn-primary">Shop Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <div class="carousel-control prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="carousel-control next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Best Sellers Section -->
+                    <section class="product-section fade-in">
+                        <div class="section-header">
+                            <h2>Best Sellers</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        
+                        <div class="products-grid">
+                            <!-- Repeat similar product cards for Best Sellers -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge bestseller">Bestseller</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Diamond Studs</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Diamond Stud Earrings</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="rating-count">(31)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 75,000</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more bestseller products -->
+                        </div>
+                    </section>
+                    
+                    <!-- Deal of the Day Section -->
+                    <section class="product-section fade-in">
+                        <div class="section-header">
+                            <h2>Deal of the Day</h2>
+                            <div class="countdown">23:59:59</div>
+                        </div>
+                        
+                        <div class="products-grid">
+                            <!-- Repeat similar product cards for Deal of the Day -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="product-badge deal">Deal</div>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <span>Gold Hoops</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Gold Hoop Earrings</h3>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star-half-alt filled"></i>
+                                        </div>
+                                        <span class="rating-count">(27)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">KES 45,000</span>
+                                        <span class="original-price">KES 60,000</span>
+                                        <span class="discount">25% OFF</span>
+                                    </div>
+                                    <button class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more deal of the day products -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>House of LUBO</h3>
+                    <p>Creating timeless pieces that celebrate elegance and craftsmanship since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Jewelry</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> The Village Market, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@houseoflubo.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM, Sun: 11AM - 6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 House of LUBO. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <span>Visa</span>
+                        <span>MasterCard</span>
+                        <span>PayPal</span>
+                        <span>M-Pesa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+                // Main JavaScript for House of LUBO Luxury Jewelry Website
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNavClose = document.querySelector('.mobile-nav-close');
+            const mobileNavExpandButtons = document.querySelectorAll('.mobile-nav-expand');
+            
+            // Toggle mobile navigation
+            function toggleMobileNav() {
+                mobileNav.classList.toggle('active');
+                mobileNavOverlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            }
+            
+            mobileMenuToggle.addEventListener('click', toggleMobileNav);
+            mobileNavClose.addEventListener('click', toggleMobileNav);
+            mobileNavOverlay.addEventListener('click', toggleMobileNav);
+            
+            // Mobile submenu expansion
+            mobileNavExpandButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const submenu = this.parentElement.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    submenu.classList.toggle('active');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+            
+            // Desktop Mega Menu
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                const megaMenu = item.querySelector('.mega-menu');
+                
+                if (megaMenu) {
+                    item.addEventListener('mouseenter', function() {
+                        megaMenu.classList.add('active');
+                    });
+                    
+                    item.addEventListener('mouseleave', function() {
+                        megaMenu.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Carousel Functionality
+            const carousels = document.querySelectorAll('.carousel');
+            
+            carousels.forEach(carousel => {
+                const carouselInner = carousel.querySelector('.carousel-inner');
+                const carouselItems = carousel.querySelectorAll('.carousel-item');
+                const prevBtn = carousel.querySelector('.carousel-control.prev');
+                const nextBtn = carousel.querySelector('.carousel-control.next');
+                const indicators = carousel.querySelectorAll('.carousel-indicator');
+                
+                let currentIndex = 0;
+                const totalItems = carouselItems.length;
+                
+                // Function to update carousel
+                function updateCarousel() {
+                    carouselItems.forEach((item, index) => {
+                        item.classList.remove('active');
+                        if (indicators[index]) {
+                            indicators[index].classList.remove('active');
+                        }
+                    });
+                    
+                    carouselItems[currentIndex].classList.add('active');
+                    if (indicators[currentIndex]) {
+                        indicators[currentIndex].classList.add('active');
+                    }
+                }
+                
+                // Next slide
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % totalItems;
+                    updateCarousel();
+                }
+                
+                // Previous slide
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                    updateCarousel();
+                }
+                
+                // Event listeners
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', nextSlide);
+                }
+                
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', prevSlide);
+                }
+                
+                // Indicator clicks
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', function() {
+                        currentIndex = index;
+                        updateCarousel();
+                    });
+                });
+                
+                // Auto-advance for hero carousel only
+                if (carousel.closest('.main-content')) {
+                    setInterval(nextSlide, 5000);
+                }
+            });
+            
+            // Filter Sidebar
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const filterClose = document.querySelector('.filter-close');
+            
+            // Toggle filter sidebar
+            if (sidebarToggle && sidebar) {
+                sidebarToggle.addEventListener('click', function() {
+                    sidebar.classList.add('active');
+                });
+                
+                filterClose.addEventListener('click', function() {
+                    sidebar.classList.remove('active');
+                });
+            }
+            
+            // Price Range Slider
+            const rangeMin = document.querySelector('.range-min');
+            const rangeMax = document.querySelector('.range-max');
+            const priceInputs = document.querySelectorAll('.price-inputs input');
+            
+            if (rangeMin && rangeMax) {
+                const minPrice = parseInt(rangeMin.min);
+                const maxPrice = parseInt(rangeMax.max);
+                
+                function updatePriceInputs() {
+                    priceInputs[0].value = rangeMin.value;
+                    priceInputs[1].value = rangeMax.value;
+                }
+                
+                rangeMin.addEventListener('input', function() {
+                    if (parseInt(rangeMin.value) > parseInt(rangeMax.value)) {
+                        rangeMin.value = rangeMax.value;
+                    }
+                    updatePriceInputs();
+                });
+                
+                rangeMax.addEventListener('input', function() {
+                    if (parseInt(rangeMax.value) < parseInt(rangeMin.value)) {
+                        rangeMax.value = rangeMin.value;
+                    }
+                    updatePriceInputs();
+                });
+                
+                priceInputs[0].addEventListener('change', function() {
+                    let value = parseInt(this.value);
+                    if (value < minPrice) value = minPrice;
+                    if (value > parseInt(rangeMax.value)) value = parseInt(rangeMax.value);
+                    rangeMin.value = value;
+                });
+                
+                priceInputs[1].addEventListener('change', function() {
+                    let value = parseInt(this.value);
+                    if (value > maxPrice) value = maxPrice;
+                    if (value < parseInt(rangeMin.value)) value = parseInt(rangeMin.value);
+                    rangeMax.value = value;
+                });
+            }
+            
+            // Wishlist Functionality
+            const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+            const wishlistCount = document.querySelector('.wishlist-count');
+            let wishlistItems = 2; // Initial count
+            
+            wishlistButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    
+                    if (icon.classList.contains('far')) {
+                        // Add to wishlist
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        wishlistItems++;
+                        
+                        // Show notification
+                        showNotification('Added to wishlist!');
+                    } else {
+                        // Remove from wishlist
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        wishlistItems--;
+                        
+                        // Show notification
+                        showNotification('Removed from wishlist!');
+                    }
+                    
+                    // Update wishlist count
+                    if (wishlistCount) {
+                        wishlistCount.textContent = wishlistItems;
+                    }
+                });
+            });
+            
+            // Shopping Cart Functionality
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartCount = document.querySelector('.cart-count');
+            let cartItems = 3; // Initial count
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productTitle = productCard.querySelector('.product-title').textContent;
+                    const productPrice = productCard.querySelector('.current-price').textContent;
+                    
+                    cartItems++;
+                    
+                    // Update cart count
+                    if (cartCount) {
+                        cartCount.textContent = cartItems;
+                    }
+                    
+                    // Show notification
+                    showNotification(`Added ${productTitle} to cart!`);
+                    
+                    // Add animation to cart icon
+                    const cartIcon = document.querySelector('.fa-shopping-bag').closest('.action-item');
+                    cartIcon.classList.add('pulse');
+                    setTimeout(() => {
+                        cartIcon.classList.remove('pulse');
+                    }, 1000);
+                });
+            });
+            
+            // Notification System
+            function showNotification(message) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-check-circle"></i>
+                        <span>${message}</span>
+                    </div>
+                `;
+                
+                // Add to body
+                document.body.appendChild(notification);
+                
+                // Show notification
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                // Hide and remove after 3 seconds
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+            
+            // Deal of the Day Countdown
+            const countdownElement = document.querySelector('.countdown');
+            
+            if (countdownElement) {
+                function updateCountdown() {
+                    // Set target time to end of day
+                    const now = new Date();
+                    const endOfDay = new Date();
+                    endOfDay.setHours(23, 59, 59, 999);
+                    
+                    const timeLeft = endOfDay - now;
+                    
+                    if (timeLeft <= 0) {
+                        countdownElement.textContent = '00:00:00';
+                        return;
+                    }
+                    
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    
+                    countdownElement.textContent = 
+                        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }
+                
+                // Update countdown immediately and every second
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }
+            
+            // Search Functionality
+            const searchInput = document.querySelector('.search-bar input');
+            const searchButton = document.querySelector('.search-btn');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.trim();
+                
+                if (searchTerm) {
+                    // In a real application, this would make an API call or filter products
+                    showNotification(`Searching for: ${searchTerm}`);
+                    
+                    // For demo purposes, simulate search
+                    setTimeout(() => {
+                        showNotification(`Found 15 results for "${searchTerm}"`);
+                    }, 1000);
+                }
+            }
+            
+            if (searchButton) {
+                searchButton.addEventListener('click', performSearch);
+            }
+            
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+            
+            // Scroll Animations
+            function checkScroll() {
+                const elements = document.querySelectorAll('.fade-in');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Initial check and scroll listener
+            checkScroll();
+            window.addEventListener('scroll', checkScroll);
+            
+            // Mobile Products Scroll
+            const productsScroll = document.querySelector('.products-scroll');
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            
+            if (productsScroll && scrollIndicator) {
+                let isDragging = false;
+                let startX;
+                let scrollLeft;
+                
+                productsScroll.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startX = e.pageX - productsScroll.offsetLeft;
+                    scrollLeft = productsScroll.scrollLeft;
+                });
+                
+                productsScroll.addEventListener('mouseleave', () => {
+                    isDragging = false;
+                });
+                
+                productsScroll.addEventListener('mouseup', () => {
+                    isDragging = false;
+                });
+                
+                productsScroll.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    const x = e.pageX - productsScroll.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    productsScroll.scrollLeft = scrollLeft - walk;
+                });
+                
+                // Touch events for mobile
+                productsScroll.addEventListener('touchstart', (e) => {
+                    isDragging = true;
+                    startX = e.touches[0].pageX - productsScroll.offsetLeft;
+                    scrollLeft = productsScroll.scrollLeft;
+                });
+                
+                productsScroll.addEventListener('touchend', () => {
+                    isDragging = false;
+                });
+                
+                productsScroll.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    const x = e.touches[0].pageX - productsScroll.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    productsScroll.scrollLeft = scrollLeft - walk;
+                });
+                
+                // Hide scroll indicator after first scroll
+                productsScroll.addEventListener('scroll', () => {
+                    if (productsScroll.scrollLeft > 10) {
+                        scrollIndicator.style.opacity = '0';
+                    }
+                });
+            }
+            
+            // Account Menu (simplified)
+            const accountItem = document.querySelector('.action-item:first-child');
+            
+            if (accountItem) {
+                accountItem.addEventListener('click', function() {
+                    showNotification('Account menu would open here');
+                });
+            }
+            
+            // Apply Filters Button
+            const applyFiltersBtn = document.querySelector('.filter-actions .btn-primary');
+            
+            if (applyFiltersBtn) {
+                applyFiltersBtn.addEventListener('click', function() {
+                    showNotification('Filters applied successfully!');
+                    sidebar.classList.remove('active');
+                });
+            }
+            
+            // Reset Filters Button
+            const resetFiltersBtn = document.querySelector('.filter-actions .btn-secondary');
+            
+            if (resetFiltersBtn) {
+                resetFiltersBtn.addEventListener('click', function() {
+                    // Reset all checkboxes
+                    const checkboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = false;
+                    });
+                    
+                    // Reset price range
+                    if (rangeMin && rangeMax) {
+                        rangeMin.value = 0;
+                        rangeMax.value = 5000;
+                        updatePriceInputs();
+                    }
+                    
+                    showNotification('Filters reset successfully!');
+                });
+            }
+            
+            // Add CSS for animations and notifications
+            const style = document.createElement('style');
+            style.textContent = `
+                /* Notification Styles */
+                .notification {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #2ecc71;
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    z-index: 10000;
+                    transform: translateX(400px);
+                    transition: transform 0.3s ease;
+                    max-width: 300px;
+                }
+                
+                .notification.show {
+                    transform: translateX(0);
+                }
+                
+                .notification-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                
+                .notification i {
+                    font-size: 18px;
+                }
+                
+                /* Pulse Animation for Cart */
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                    100% { transform: scale(1); }
+                }
+                
+                .pulse {
+                    animation: pulse 0.5s ease;
+                }
+                
+                /* Scroll Animation */
+                .fade-in {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                }
+                
+                .fade-in.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                /* Mobile Nav Active States */
+                .mobile-nav.active {
+                    transform: translateX(0);
+                }
+                
+                .mobile-nav-overlay.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+                .mobile-submenu {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease;
+                }
+                
+                .mobile-submenu.active {
+                    max-height: 500px;
+                }
+                
+                /* Mega Menu Active State */
+                .mega-menu {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-10px);
+                    transition: all 0.3s ease;
+                }
+                
+                .mega-menu.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+                
+                /* Sidebar Active State */
+                .sidebar.active {
+                    transform: translateX(0);
+                }
+                
+                /* Carousel Transitions */
+                .carousel-item {
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .carousel-item.active {
+                    opacity: 1;
+                    position: relative;
+                }
+                
+                /* Scroll Indicator */
+                .scroll-indicator {
+                    transition: opacity 0.3s ease;
+                }
+                
+                /* Body No Scroll */
+                body.no-scroll {
+                    overflow: hidden;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

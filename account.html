@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - House of LUBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="global-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-gem"></i>
+                        House of LUBO
+                    </a>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Navigation Tabs -->
+    <div class="page-nav">
+        <div class="container">
+            <div class="page-nav-content">
+                <div class="page-nav-item">
+                    <i class="fas fa-home"></i>
+                    <span class="page-nav-text">Home</span>
+                </div>
+                <div class="page-nav-item">
+                    <i class="fas fa-fire"></i>
+                    <span class="page-nav-text">Trending</span>
+                </div>
+                <div class="page-nav-item">
+                    <i class="fas fa-tag"></i>
+                    <span class="page-nav-text">Deals</span>
+                </div>
+                <div class="page-nav-item">
+                    <i class="fas fa-star"></i>
+                    <span class="page-nav-text">Collections</span>
+                </div>
+                <div class="page-nav-item">
+                    <i class="fas fa-gift"></i>
+                    <span class="page-nav-text">Gifts</span>
+                </div>
+                <div class="page-nav-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="page-nav-text">About</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay"></div>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="account-container">
+                <!-- Account Sidebar -->
+                <aside class="account-sidebar">
+                    <div class="account-sidebar-header">
+                        <div class="account-avatar">
+                            JS
+                        </div>
+                        <div class="account-info">
+                            <h3>Jane Smith</h3>
+                            <p>Premium Member</p>
+                        </div>
+                    </div>
+                    
+                    <div class="account-menu">
+                        <div class="account-menu-item active" data-section="wishlist">
+                            <i class="fas fa-heart"></i>
+                            <span>My Wishlist</span>
+                        </div>
+                        <div class="account-menu-item" data-section="orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Order History</span>
+                        </div>
+                        <div class="account-menu-item" data-section="details">
+                            <i class="fas fa-user"></i>
+                            <span>Account Details</span>
+                        </div>
+                        <div class="account-menu-item" data-section="addresses">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Address Book</span>
+                        </div>
+                        <div class="account-menu-item" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </div>
+                        <div class="account-menu-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </div>
+                    </div>
+                </aside>
+                
+                <!-- Account Content -->
+                <div class="account-content">
+                    <!-- Wishlist Section -->
+                    <section class="account-section active" id="wishlist">
+                        <div class="section-header">
+                            <h2>My Wishlist</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <span>Update</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="wishlist-grid">
+                            <!-- Wishlist Item 1 -->
+                            <div class="wishlist-item">
+                                <div class="wishlist-item-image">
+                                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80" alt="Eternal Diamond Necklace">
+                                    <div class="wishlist-item-actions">
+                                        <button class="remove-wishlist">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <h3 class="wishlist-item-title">Eternal Diamond Necklace with Premium Gold Chain</h3>
+                                    <div class="wishlist-item-price">
+                                        <span class="current-price">KES 89,500</span>
+                                        <span class="original-price">KES 105,000</span>
+                                        <span class="discount">15% OFF</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 2 -->
+                            <div class="wishlist-item">
+                                <div class="wishlist-item-image">
+                                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gold Hoop Earrings">
+                                    <div class="wishlist-item-actions">
+                                        <button class="remove-wishlist">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <h3 class="wishlist-item-title">Premium Gold Hoop Earrings with Diamond Accents</h3>
+                                    <div class="wishlist-item-price">
+                                        <span class="current-price">KES 45,000</span>
+                                        <span class="original-price">KES 60,000</span>
+                                        <span class="discount">25% OFF</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 3 -->
+                            <div class="wishlist-item">
+                                <div class="wishlist-item-image">
+                                    <img src="https://images.unsplash.com/photo-1596944946755-85932a1a4e6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Silver Diamond Ring">
+                                    <div class="wishlist-item-actions">
+                                        <button class="remove-wishlist">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <h3 class="wishlist-item-title">Sterling Silver Diamond Engagement Ring</h3>
+                                    <div class="wishlist-item-price">
+                                        <span class="current-price">KES 78,500</span>
+                                        <span class="original-price">KES 95,000</span>
+                                        <span class="discount">17% OFF</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 4 -->
+                            <div class="wishlist-item">
+                                <div class="wishlist-item-image">
+                                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Pearl Necklace">
+                                    <div class="wishlist-item-actions">
+                                        <button class="remove-wishlist">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <h3 class="wishlist-item-title">Luxury Pearl Necklace with Gold Clasp</h3>
+                                    <div class="wishlist-item-price">
+                                        <span class="current-price">KES 62,000</span>
+                                        <span class="original-price">KES 85,000</span>
+                                        <span class="discount">27% OFF</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Empty Wishlist State -->
+                        <!-- <div class="wishlist-empty">
+                            <i class="fas fa-heart"></i>
+                            <h3>Your wishlist is empty</h3>
+                            <p>Start adding items you love to your wishlist</p>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Start Shopping</span>
+                            </button>
+                        </div> -->
+                    </section>
+                    
+                    <!-- Order History Section -->
+                    <section class="account-section" id="orders">
+                        <div class="section-header">
+                            <h2>Order History</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i>
+                                    <span>Export</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="orders-list">
+                            <!-- Order 1 -->
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Order #LUBO-2023-0012</h3>
+                                        <p>Placed on October 15, 2023</p>
+                                    </div>
+                                    <div class="order-status status-delivered">
+                                        Delivered
+                                    </div>
+                                </div>
+                                
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="order-item-image">
+                                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80" alt="Diamond Necklace">
+                                        </div>
+                                        <div class="order-item-name">Diamond Necklace</div>
+                                        <div class="order-item-quantity">Qty: 1</div>
+                                    </div>
+                                    
+                                    <div class="order-item">
+                                        <div class="order-item-image">
+                                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gold Earrings">
+                                        </div>
+                                        <div class="order-item-name">Gold Earrings</div>
+                                        <div class="order-item-quantity">Qty: 2</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div class="order-total">Total: KES 179,500</div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i>
+                                            <span>View Details</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="fas fa-redo"></i>
+                                            <span>Reorder</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Order 2 -->
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Order #LUBO-2023-0008</h3>
+                                        <p>Placed on September 28, 2023</p>
+                                    </div>
+                                    <div class="order-status status-shipped">
+                                        Shipped
+                                    </div>
+                                </div>
+                                
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="order-item-image">
+                                            <img src="https://images.unsplash.com/photo-1596944946755-85932a1a4e6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Silver Ring">
+                                        </div>
+                                        <div class="order-item-name">Silver Ring</div>
+                                        <div class="order-item-quantity">Qty: 1</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div class="order-total">Total: KES 78,500</div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i>
+                                            <span>View Details</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="fas fa-truck"></i>
+                                            <span>Track Order</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Order 3 -->
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Order #LUBO-2023-0005</h3>
+                                        <p>Placed on August 12, 2023</p>
+                                    </div>
+                                    <div class="order-status status-delivered">
+                                        Delivered
+                                    </div>
+                                </div>
+                                
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="order-item-image">
+                                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Pearl Necklace">
+                                        </div>
+                                        <div class="order-item-name">Pearl Necklace</div>
+                                        <div class="order-item-quantity">Qty: 1</div>
+                                    </div>
+                                    
+                                    <div class="order-item">
+                                        <div class="order-item-image">
+                                            <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Rose Gold Bracelet">
+                                        </div>
+                                        <div class="order-item-name">Rose Gold Bracelet</div>
+                                        <div class="order-item-quantity">Qty: 1</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div class="order-total">Total: KES 117,000</div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i>
+                                            <span>View Details</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="fas fa-redo"></i>
+                                            <span>Reorder</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- No Orders State -->
+                        <!-- <div class="no-orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            <h3>No orders yet</h3>
+                            <p>Start shopping to see your order history here</p>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Start Shopping</span>
+                            </button>
+                        </div> -->
+                    </section>
+                    
+                    <!-- Account Details Section -->
+                    <section class="account-section" id="details">
+                        <div class="section-header">
+                            <h2>Account Details</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-save"></i>
+                                    <span>Save Changes</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="account-details-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="Jane">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="Smith">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="jane.smith@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+254 700 123 456">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="birthdate">Date of Birth</label>
+                                <input type="date" id="birthdate" value="1990-05-15">
+                            </div>
+                            
+                            <div class="section-header">
+                                <h3>Change Password</h3>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword">
+                                <div class="password-strength">
+                                    <div class="strength-bar strength-medium"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword">
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Address Book Section -->
+                    <section class="account-section" id="addresses">
+                        <div class="section-header">
+                            <h2>Address Book</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-primary btn-sm" id="addAddressBtn">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add New Address</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="addresses-grid">
+                            <!-- Address 1 -->
+                            <div class="address-card default">
+                                <div class="default-badge">Default</div>
+                                <div class="address-name">Home Address</div>
+                                <div class="address-details">
+                                    Jane Smith<br>
+                                    123 Jewelry Street<br>
+                                    The Village Market<br>
+                                    Nairobi 00100<br>
+                                    Kenya<br>
+                                    Phone: +254 700 123 456
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                        <span>Edit</span>
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                        <span>Delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Address 2 -->
+                            <div class="address-card">
+                                <div class="address-name">Work Address</div>
+                                <div class="address-details">
+                                    Jane Smith<br>
+                                    LUBO Jewelers Ltd<br>
+                                    Westlands Business Center<br>
+                                    Nairobi 00200<br>
+                                    Kenya<br>
+                                    Phone: +254 700 789 012
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                        <span>Edit</span>
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                        <span>Delete</span>
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-star"></i>
+                                        <span>Set Default</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Add New Address Card -->
+                            <div class="address-card add-address-card" id="addNewAddressCard">
+                                <i class="fas fa-plus"></i>
+                                <span>Add New Address</span>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Settings Section -->
+                    <section class="account-section" id="settings">
+                        <div class="section-header">
+                            <h2>Account Settings</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-save"></i>
+                                    <span>Save Preferences</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="account-details-form">
+                            <div class="form-group">
+                                <label>Email Preferences</label>
+                                <div class="filter-options">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="promotions" checked>
+                                        <label for="promotions">Promotions and Special Offers</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="newArrivals" checked>
+                                        <label for="newArrivals">New Arrivals</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="orderUpdates" checked>
+                                        <label for="orderUpdates">Order Updates</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="newsletter">
+                                        <label for="newsletter">Weekly Newsletter</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Privacy Settings</label>
+                                <div class="filter-options">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="personalizedAds" checked>
+                                        <label for="personalizedAds">Personalized Ads and Recommendations</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="dataSharing">
+                                        <label for="dataSharing">Allow Data Sharing with Partners</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="currency">Preferred Currency</label>
+                                <select id="currency">
+                                    <option value="KES" selected>Kenyan Shilling (KES)</option>
+                                    <option value="USD">US Dollar (USD)</option>
+                                    <option value="EUR">Euro (EUR)</option>
+                                    <option value="GBP">British Pound (GBP)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="language">Preferred Language</label>
+                                <select id="language">
+                                    <option value="en" selected>English</option>
+                                    <option value="sw">Swahili</option>
+                                    <option value="fr">French</option>
+                                </select>
+                            </div>
+                            
+                            <div class="section-header">
+                                <h3>Account Management</h3>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-download"></i>
+                                    <span>Download My Data</span>
+                                </button>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-user-slash"></i>
+                                    <span>Deactivate Account</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>House of LUBO</h3>
+                    <p>Creating timeless pieces that celebrate elegance and craftsmanship since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Jewelry</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> The Village Market, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@houseoflubo.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM, Sun: 11AM - 6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 House of LUBO. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <span>Visa</span>
+                        <span>MasterCard</span>
+                        <span>PayPal</span>
+                        <span>M-Pesa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Address Modal -->
+    <div class="modal-overlay" id="addressModalOverlay">
+        <div class="modal" id="addressModal">
+            <div class="modal-header">
+                <h3>Add New Address</h3>
+                <button class="modal-close" id="closeAddressModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="addressName">Address Name</label>
+                    <input type="text" id="addressName" placeholder="e.g., Home, Work">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" value="Jane">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" value="Smith">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" placeholder="123 Jewelry Street">
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Nairobi">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State/Region</label>
+                        <input type="text" id="state" placeholder="Nairobi County">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">ZIP/Postal Code</label>
+                        <input type="text" id="zipCode" placeholder="00100">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option value="Kenya" selected>Kenya</option>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+254 700 123 456">
+                </div>
+                
+                <div class="filter-option">
+                    <input type="checkbox" id="setDefault">
+                    <label for="setDefault">Set as default address</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelAddress">Cancel</button>
+                <button class="btn btn-primary">Save Address</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
+        const mobileNavExpandButtons = document.querySelectorAll('.mobile-nav-expand');
+        
+        // Toggle mobile navigation
+        function toggleMobileNav() {
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+        
+        mobileMenuToggle.addEventListener('click', toggleMobileNav);
+        mobileNavClose.addEventListener('click', toggleMobileNav);
+        mobileNavOverlay.addEventListener('click', toggleMobileNav);
+        
+        // Mobile submenu expansion
+        mobileNavExpandButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const submenu = this.parentElement.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                submenu.classList.toggle('active');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Account Navigation
+        const accountMenuItems = document.querySelectorAll('.account-menu-item');
+        const accountSections = document.querySelectorAll('.account-section');
+        
+        accountMenuItems.forEach(item => {
+            if (item.dataset.section) {
+                item.addEventListener('click', function() {
+                    // Remove active class from all menu items and sections
+                    accountMenuItems.forEach(i => i.classList.remove('active'));
+                    accountSections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked menu item
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const sectionId = this.dataset.section;
+                    document.getElementById(sectionId).classList.add('active');
+                });
+            }
+        });
+        
+        // Address Modal
+        const addAddressBtn = document.getElementById('addAddressBtn');
+        const addNewAddressCard = document.getElementById('addNewAddressCard');
+        const addressModalOverlay = document.getElementById('addressModalOverlay');
+        const addressModal = document.getElementById('addressModal');
+        const closeAddressModal = document.getElementById('closeAddressModal');
+        const cancelAddress = document.getElementById('cancelAddress');
+        
+        function openAddressModal() {
+            addressModalOverlay.classList.add('active');
+            addressModal.classList.add('active');
+            document.body.classList.add('no-scroll');
+        }
+        
+        function closeAddressModalFunc() {
+            addressModalOverlay.classList.remove('active');
+            addressModal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
+        
+        addAddressBtn.addEventListener('click', openAddressModal);
+        addNewAddressCard.addEventListener('click', openAddressModal);
+        closeAddressModal.addEventListener('click', closeAddressModalFunc);
+        cancelAddress.addEventListener('click', closeAddressModalFunc);
+        addressModalOverlay.addEventListener('click', closeAddressModalFunc);
+        
+        // Prevent modal close when clicking inside modal
+        addressModal.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Remove from wishlist
+        const removeWishlistButtons = document.querySelectorAll('.remove-wishlist');
+        
+        removeWishlistButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const wishlistItem = this.closest('.wishlist-item');
+                wishlistItem.style.opacity = '0';
+                wishlistItem.style.transform = 'translateY(10px)';
+                
+                setTimeout(() => {
+                    wishlistItem.remove();
+                    
+                    // Update wishlist count
+                    const wishlistCount = document.querySelector('.wishlist-count');
+                    if (wishlistCount) {
+                        let currentCount = parseInt(wishlistCount.textContent);
+                        if (currentCount > 0) {
+                            wishlistCount.textContent = currentCount - 1;
+                        }
+                    }
+                    
+                    // Show empty state if no items left
+                    const wishlistGrid = document.querySelector('.wishlist-grid');
+                    if (wishlistGrid.children.length === 0) {
+                        const emptyState = document.createElement('div');
+                        emptyState.className = 'wishlist-empty';
+                        emptyState.innerHTML = `
+                            <i class="fas fa-heart"></i>
+                            <h3>Your wishlist is empty</h3>
+                            <p>Start adding items you love to your wishlist</p>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Start Shopping</span>
+                            </button>
+                        `;
+                        wishlistGrid.parentNode.appendChild(emptyState);
+                    }
+                }, 300);
+            });
+        });
+        
+        // Add to cart from wishlist
+        const addToCartButtons = document.querySelectorAll('.wishlist-item .btn-primary');
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const cartCount = document.querySelector('.cart-count');
+                if (cartCount) {
+                    let currentCount = parseInt(cartCount.textContent);
+                    cartCount.textContent = currentCount + 1;
+                }
+                
+                // Show notification
+                showNotification('Item added to cart!');
+            });
+        });
+        
+        // Notification System
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            // Add to body
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // Hide and remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+        
+        // Password strength indicator
+        const newPasswordInput = document.getElementById('newPassword');
+        const strengthBar = document.querySelector('.strength-bar');
+        
+        if (newPasswordInput && strengthBar) {
+            newPasswordInput.addEventListener('input', function() {
+                const password = this.value;
+                let strength = 0;
+                
+                if (password.length >= 8) strength++;
+                if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
+                if (password.match(/\d/)) strength++;
+                if (password.match(/[^a-zA-Z\d]/)) strength++;
+                
+                strengthBar.className = 'strength-bar';
+                if (strength <= 1) {
+                    strengthBar.classList.add('strength-weak');
+                } else if (strength <= 3) {
+                    strengthBar.classList.add('strength-medium');
+                } else {
+                    strengthBar.classList.add('strength-strong');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

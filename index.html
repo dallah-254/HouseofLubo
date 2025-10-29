@@ -6,19 +6,16 @@
     <title>House of LUBO - Luxury Jewelry</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="global-styles.css">
+    <link rel="stylesheet" href="index-account.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <i class="fas fa-gem"></i>
-                        House of LUBO
-                    </a>
-                </div>
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <img src="lubo logo.jpg" alt="" class="logo">
+                </div>                
                 
                 <div class="search-bar">
                     <input type="text" placeholder="Search for jewelry, accessories, and more...">
@@ -29,18 +26,18 @@
                 
                 <div class="header-actions">
                     <div class="action-item">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-user" onclick = "window.href.location = 'account.html'"></i>
                         <span class="action-text">Account</span>
                     </div>
                     <div class="action-item">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart" onclick = "window.location.href = 'account.html'"></i>
                         <span class="action-text">Wishlist</span>
-                        <span class="wishlist-count">2</span>
+                        <span class="wishlist-count">0</span>
                     </div>
                     <div class="action-item">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="action-text">Cart</span>
-                        <span class="cart-count">3</span>
+                        <span class="cart-count">0</span>
                     </div>
                 </div>
                 
@@ -159,9 +156,6 @@
         <div class="container">
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
                     <a href="#" class="nav-link">New Arrivals</a>
                     <div class="mega-menu">
                         <div class="mega-menu-content">
@@ -276,10 +270,7 @@
                     <a href="#" class="nav-link">Watches</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Accessories</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Sale</a>
+                    <a href="#" class="nav-link">Perfumes</a>
                 </li>
             </ul>
         </div>
@@ -1707,7 +1698,7 @@
             
             if (accountItem) {
                 accountItem.addEventListener('click', function() {
-                    showNotification('Account menu would open here');
+                    window.location.href = 'account.html';
                 });
             }
             

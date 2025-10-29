@@ -149,24 +149,10 @@ ul {
     padding: 12px 0;
 }
 
-.logo a {
-    font-size: 24px;
-    font-weight: 700;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.logo i {
-    font-size: 20px;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.logo{
+    height: 55px;
+    width: 50px;
+    cursor: pointer;
 }
 
 .search-bar {

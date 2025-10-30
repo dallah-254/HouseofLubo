@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - House of LUBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index-account.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    
+                </div>                
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search collections...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-item">
+                        <i class="fas fa-user" onclick="window.location.href='account.html'"></i>
+                        <span class="action-text">Account</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-heart" onclick="window.location.href='wishlist.html'"></i>
+                        <span class="action-text">Wishlist</span>
+                        <span class="wishlist-count">3</span>
+                    </div>
+                    <div class="action-item" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="action-text">Cart</span>
+                        <span class="cart-count">2</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Navigation Tabs -->
+    <div class="page-nav">
+        <div class="container">
+            <div class="page-nav-content">
+                <div class="page-nav-item" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i>
+                    <span class="page-nav-text">Home</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href='trending.html'">
+                    <i class="fas fa-fire"></i>
+                    <span class="page-nav-text">Trending</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href='deals.html'">
+                    <i class="fas fa-tag"></i>
+                    <span class="page-nav-text">Deals</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href = 'collection.html'">
+                    <i class="fas fa-star"></i>
+                    <span class="page-nav-text">Collections</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href = 'about.html'">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="page-nav-text">About</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation (Same as index.html) -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav">
+        <!-- Mobile nav content same as index.html -->
+    </div>
+
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">New Arrivals</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Jewelry</h4>
+                                <ul>
+                                    <li><a href="#">Necklaces</a></li>
+                                    <li><a href="#">Rings</a></li>
+                                    <li><a href="#">Earrings</a></li>
+                                    <li><a href="#">Bracelets</a></li>
+                                    <li><a href="#">Watches</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Accessories</h4>
+                                <ul>
+                                    <li><a href="#">Handbags</a></li>
+                                    <li><a href="#">Sunglasses</a></li>
+                                    <li><a href="#">Scarves</a></li>
+                                    <li><a href="#">Belts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Collections</h4>
+                                <ul>
+                                    <li><a href="#">Bridal Collection</a></li>
+                                    <li><a href="#">Luxury Collection</a></li>
+                                    <li><a href="#">Everyday Elegance</a></li>
+                                    <li><a href="#">Statement Pieces</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Necklaces</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>By Type</h4>
+                                <ul>
+                                    <li><a href="#">Pendant Necklaces</a></li>
+                                    <li><a href="#">Choker Necklaces</a></li>
+                                    <li><a href="#">Statement Necklaces</a></li>
+                                    <li><a href="#">Layered Necklaces</a></li>
+                                    <li><a href="#">Pearl Necklaces</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Material</h4>
+                                <ul>
+                                    <li><a href="#">Gold Necklaces</a></li>
+                                    <li><a href="#">Silver Necklaces</a></li>
+                                    <li><a href="#">Diamond Necklaces</a></li>
+                                    <li><a href="#">Gemstone Necklaces</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Length</h4>
+                                <ul>
+                                    <li><a href="#">Choker (14-16")</a></li>
+                                    <li><a href="#">Princess (17-19")</a></li>
+                                    <li><a href="#">Matinee (20-24")</a></li>
+                                    <li><a href="#">Opera (28-34")</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Rings</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>By Type</h4>
+                                <ul>
+                                    <li><a href="#">Engagement Rings</a></li>
+                                    <li><a href="#">Wedding Rings</a></li>
+                                    <li><a href="#">Statement Rings</a></li>
+                                    <li><a href="#">Stackable Rings</a></li>
+                                    <li><a href="#">Cocktail Rings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Material</h4>
+                                <ul>
+                                    <li><a href="#">Gold Rings</a></li>
+                                    <li><a href="#">Silver Rings</a></li>
+                                    <li><a href="#">Platinum Rings</a></li>
+                                    <li><a href="#">Titanium Rings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Stone</h4>
+                                <ul>
+                                    <li><a href="#">Diamond Rings</a></li>
+                                    <li><a href="#">Sapphire Rings</a></li>
+                                    <li><a href="#">Ruby Rings</a></li>
+                                    <li><a href="#">Emerald Rings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Earrings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Bracelets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Watches</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Perfumes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h2>Shopping Cart (2 Items)</h2>
+                        <button class="btn btn-secondary">Continue Shopping</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gold Hoop Earrings">
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-header">
+                                <div>
+                                    <h3 class="cart-item-title">Gold Hoop Earrings</h3>
+                                    <div class="cart-item-price">KES 45,000</div>
+                                </div>
+                                <button class="cart-item-remove">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <div class="cart-item-options">
+                                <div class="cart-item-option">
+                                    <strong>Material:</strong> 18K Gold
+                                </div>
+                                <div class="cart-item-option">
+                                    <strong>Size:</strong> Medium
+                                </div>
+                            </div>
+                            <div class="cart-item-footer">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="text" class="quantity-input" value="1" readonly>
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                                <div class="cart-item-total">KES 45,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="https://images.unsplash.com/photo-1596944946755-85932a1a4e6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Silver Diamond Ring">
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-header">
+                                <div>
+                                    <h3 class="cart-item-title">Silver Diamond Ring</h3>
+                                    <div class="cart-item-price">KES 78,500</div>
+                                </div>
+                                <button class="cart-item-remove">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <div class="cart-item-options">
+                                <div class="cart-item-option">
+                                    <strong>Material:</strong> Sterling Silver
+                                </div>
+                                <div class="cart-item-option">
+                                    <strong>Size:</strong> 7
+                                </div>
+                            </div>
+                            <div class="cart-item-footer">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="text" class="quantity-input" value="1" readonly>
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                                <div class="cart-item-total">KES 78,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>KES 123,500</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="summary-shipping">KES 1,500</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>KES 12,350</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span class="summary-discount">- KES 5,000</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>KES 132,350</span>
+                    </div>
+                    
+                    <div class="promo-code">
+                        <h4>Promo Code</h4>
+                        <div class="promo-input">
+                            <input type="text" placeholder="Enter code">
+                            <button class="btn btn-sm">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary checkout-btn" id="start-checkout">Proceed to Checkout</button>
+                    
+                    <div class="secure-checkout">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure checkout</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Checkout Section (Initially Hidden) -->
+            <div class="checkout-section" id="checkout-section">
+                <div class="checkout-steps">
+                    <div class="checkout-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Shipping</div>
+                    </div>
+                    <div class="checkout-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="checkout-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                </div>
+                
+                <div class="checkout-forms">
+                    <div class="checkout-form">
+                        <!-- Step 1: Shipping Information -->
+                        <div class="checkout-form-section active" id="shipping-form">
+                            <h3>Shipping Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="your@email.com">
+                            </div>
+                            
+                            <div class="form-columns">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" placeholder="123 Main Street">
+                            </div>
+                            
+                            <div class="form-columns">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" placeholder="Nairobi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code</label>
+                                    <input type="text" id="postalCode" placeholder="00100">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country">
+                                    <option value="kenya">Kenya</option>
+                                    <option value="uganda">Uganda</option>
+                                    <option value="tanzania">Tanzania</option>
+                                    <option value="rwanda">Rwanda</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+254 700 123 456">
+                            </div>
+                            
+                            <div class="checkout-actions">
+                                <button class="btn btn-secondary" id="back-to-cart">Back to Cart</button>
+                                <button class="btn btn-primary" id="continue-to-payment">Continue to Payment</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Payment Information -->
+                        <div class="checkout-form-section" id="payment-form">
+                            <h3>Payment Method</h3>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-method selected">
+                                    <input type="radio" name="payment" id="credit-card" checked>
+                                    <div class="payment-icon">
+                                        <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <div class="payment-details">
+                                        <h4>Credit/Debit Card</h4>
+                                        <p>Pay with Visa, MasterCard or American Express</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <input type="radio" name="payment" id="mpesa">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="payment-details">
+                                        <h4>M-Pesa</h4>
+                                        <p>Pay securely with M-Pesa</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <input type="radio" name="payment" id="paypal">
+                                    <div class="payment-icon">
+                                        <i class="fab fa-paypal"></i>
+                                    </div>
+                                    <div class="payment-details">
+                                        <h4>PayPal</h4>
+                                        <p>Pay with your PayPal account</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-columns">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                            </div>
+                            
+                            <div class="form-columns">
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date</label>
+                                    <input type="text" id="expiryDate" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cardName">Name on Card</label>
+                                <input type="text" id="cardName" placeholder="John Doe">
+                            </div>
+                            
+                            <div class="checkout-actions">
+                                <button class="btn btn-secondary" id="back-to-shipping">Back to Shipping</button>
+                                <button class="btn btn-primary" id="place-order">Place Order</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Order Confirmation -->
+                        <div class="checkout-form-section" id="confirmation">
+                            <div style="text-align: center; padding: 30px 0;">
+                                <i class="fas fa-check-circle" style="font-size: 60px; color: var(--success); margin-bottom: 20px;"></i>
+                                <h3 style="color: var(--teal); margin-bottom: 15px;">Order Confirmed!</h3>
+                                <p style="margin-bottom: 20px;">Thank you for your purchase. Your order has been confirmed and will be shipped soon.</p>
+                                <p style="font-weight: 500; margin-bottom: 25px;">Order #: <span style="color: var(--teal);">LUBO-2023-5876</span></p>
+                                <div class="checkout-actions">
+                                    <button class="btn btn-primary" onclick="window.location.href='index.html'">Continue Shopping</button>
+                                    <button class="btn btn-secondary" onclick="window.location.href='account.html'">View Order Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-sidebar">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="order-summary-items">
+                            <div class="order-summary-item">
+                                <span class="name">Gold Hoop Earrings</span>
+                                <span class="price">KES 45,000</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <span class="name">Silver Diamond Ring</span>
+                                <span class="price">KES 78,500</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <span class="name">Shipping</span>
+                                <span class="price">KES 1,500</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <span class="name">Tax</span>
+                                <span class="price">KES 12,350</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <span class="name">Discount</span>
+                                <span class="price" style="color: var(--coral);">- KES 5,000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="order-summary-totals">
+                            <div class="order-summary-total">
+                                <span>Total</span>
+                                <span>KES 132,350</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>House of LUBO</h3>
+                    <p>Creating timeless pieces that celebrate elegance and craftsmanship since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Jewelry</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> The Village Market, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@houseoflubo.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM, Sun: 11AM - 6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 House of LUBO. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <span>Visa</span>
+                        <span>MasterCard</span>
+                        <span>PayPal</span>
+                        <span>M-Pesa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cart Page JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCheckoutBtn = document.getElementById('start-checkout');
+            const checkoutSection = document.getElementById('checkout-section');
+            const backToCartBtn = document.getElementById('back-to-cart');
+            const continueToPaymentBtn = document.getElementById('continue-to-payment');
+            const backToShippingBtn = document.getElementById('back-to-shipping');
+            const placeOrderBtn = document.getElementById('place-order');
+            
+            const checkoutSteps = document.querySelectorAll('.checkout-step');
+            const checkoutForms = document.querySelectorAll('.checkout-form-section');
+            
+            let currentStep = 1;
+            
+            // Start checkout process
+            startCheckoutBtn.addEventListener('click', function() {
+                checkoutSection.classList.add('active');
+                document.querySelector('.cart-container').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Back to cart
+            backToCartBtn.addEventListener('click', function() {
+                checkoutSection.classList.remove('active');
+            });
+            
+            // Continue to payment
+            continueToPaymentBtn.addEventListener('click', function() {
+                updateCheckoutStep(2);
+            });
+            
+            // Back to shipping
+            backToShippingBtn.addEventListener('click', function() {
+                updateCheckoutStep(1);
+            });
+            
+            // Place order
+            placeOrderBtn.addEventListener('click', function() {
+                updateCheckoutStep(3);
+            });
+            
+            // Update checkout step
+            function updateCheckoutStep(step) {
+                currentStep = step;
+                
+                // Update step indicators
+                checkoutSteps.forEach(stepEl => {
+                    const stepNumber = parseInt(stepEl.getAttribute('data-step'));
+                    
+                    stepEl.classList.remove('active', 'completed');
+                    
+                    if (stepNumber === currentStep) {
+                        stepEl.classList.add('active');
+                    } else if (stepNumber < currentStep) {
+                        stepEl.classList.add('completed');
+                    }
+                });
+                
+                // Update form visibility
+                checkoutForms.forEach(form => {
+                    form.classList.remove('active');
+                });
+                
+                if (currentStep === 1) {
+                    document.getElementById('shipping-form').classList.add('active');
+                } else if (currentStep === 2) {
+                    document.getElementById('payment-form').classList.add('active');
+                } else if (currentStep === 3) {
+                    document.getElementById('confirmation').classList.add('active');
+                }
+            }
+            
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    paymentMethods.forEach(m => m.classList.remove('selected'));
+                    this.classList.add('selected');
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                });
+            });
+            
+            // Quantity controls
+            const quantityBtns = document.querySelectorAll('.quantity-btn');
+            
+            quantityBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const input = this.parentElement.querySelector('.quantity-input');
+                    let value = parseInt(input.value);
+                    
+                    if (this.textContent === '+') {
+                        value++;
+                    } else if (this.textContent === '-' && value > 1) {
+                        value--;
+                    }
+                    
+                    input.value = value;
+                    
+                    // Update item total
+                    const itemTotal = this.closest('.cart-item').querySelector('.cart-item-total');
+                    const itemPrice = this.closest('.cart-item').querySelector('.cart-item-price');
+                    const price = parseInt(itemPrice.textContent.replace('KES ', '').replace(',', ''));
+                    itemTotal.textContent = 'KES ' + (price * value).toLocaleString();
+                    
+                    updateCartSummary();
+                });
+            });
+            
+            // Remove item from cart
+            const removeBtns = document.querySelectorAll('.cart-item-remove');
+            
+            removeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const cartItem = this.closest('.cart-item');
+                    cartItem.style.animation = 'slideOutLeft 0.3s ease forwards';
+                    
+                    setTimeout(() => {
+                        cartItem.remove();
+                        updateCartSummary();
+                        
+                        // Update cart count in header
+                        const cartCount = document.querySelector('.cart-count');
+                        if (cartCount) {
+                            let count = parseInt(cartCount.textContent);
+                            cartCount.textContent = count - 1;
+                        }
+                    }, 300);
+                });
+            });
+            
+            // Update cart summary
+            function updateCartSummary() {
+                let subtotal = 0;
+                
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    const itemTotal = item.querySelector('.cart-item-total');
+                    const total = parseInt(itemTotal.textContent.replace('KES ', '').replace(',', ''));
+                    subtotal += total;
+                });
+                
+                const shipping = 1500;
+                const tax = Math.round(subtotal * 0.1);
+                const discount = 5000;
+                const total = subtotal + shipping + tax - discount;
+                
+                document.querySelectorAll('.summary-row')[0].querySelector('span:last-child').textContent = 'KES ' + subtotal.toLocaleString();
+                document.querySelectorAll('.summary-row')[2].querySelector('span:last-child').textContent = 'KES ' + tax.toLocaleString();
+                document.querySelectorAll('.summary-row.total')[0].querySelector('span:last-child').textContent = 'KES ' + total.toLocaleString();
+                
+                // Update checkout sidebar
+                document.querySelectorAll('.order-summary-item')[0].querySelector('.price').textContent = 'KES ' + (subtotal - 78500).toLocaleString();
+                document.querySelectorAll('.order-summary-item')[2].querySelector('.price').textContent = 'KES ' + shipping.toLocaleString();
+                document.querySelectorAll('.order-summary-item')[3].querySelector('.price').textContent = 'KES ' + tax.toLocaleString();
+                document.querySelector('.order-summary-total span:last-child').textContent = 'KES ' + total.toLocaleString();
+            }
+            
+            // Promo code application
+            const applyPromoBtn = document.querySelector('.promo-input .btn');
+            
+            applyPromoBtn.addEventListener('click', function() {
+                const promoInput = this.previousElementSibling;
+                const promoCode = promoInput.value.trim();
+                
+                if (promoCode) {
+                    // In a real application, this would validate the promo code with the server
+                    if (promoCode.toUpperCase() === 'LUBO10') {
+                        showNotification('Promo code applied successfully! 10% discount added.');
+                        promoInput.value = '';
+                    } else {
+                        showNotification('Invalid promo code. Please try again.');
+                    }
+                }
+            });
+            
+            // Notification function
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-check-circle"></i>
+                        <span>${message}</span>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

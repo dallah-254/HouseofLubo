@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Diamond Necklace - House of LUBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index-account.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    
+                </div>                
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search collections...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-item">
+                        <i class="fas fa-user" onclick="window.location.href='account.html'"></i>
+                        <span class="action-text">Account</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-heart" onclick="window.location.href='wishlist.html'"></i>
+                        <span class="action-text">Wishlist</span>
+                        <span class="wishlist-count">3</span>
+                    </div>
+                    <div class="action-item" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="action-text">Cart</span>
+                        <span class="cart-count">2</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Navigation Tabs -->
+    <div class="page-nav">
+        <div class="container">
+            <div class="page-nav-content">
+                <div class="page-nav-item" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i>
+                    <span class="page-nav-text">Home</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href='trending.html'">
+                    <i class="fas fa-fire"></i>
+                    <span class="page-nav-text">Trending</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href='deals.html'">
+                    <i class="fas fa-tag"></i>
+                    <span class="page-nav-text">Deals</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href = 'collection.html'">
+                    <i class="fas fa-star"></i>
+                    <span class="page-nav-text">Collections</span>
+                </div>
+                <div class="page-nav-item" onclick="window.location.href = 'about.html'">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="page-nav-text">About</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation (Same as index.html) -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav">
+        <!-- Mobile nav content same as index.html -->
+    </div>
+
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">New Arrivals</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Jewelry</h4>
+                                <ul>
+                                    <li><a href="#">Necklaces</a></li>
+                                    <li><a href="#">Rings</a></li>
+                                    <li><a href="#">Earrings</a></li>
+                                    <li><a href="#">Bracelets</a></li>
+                                    <li><a href="#">Watches</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Accessories</h4>
+                                <ul>
+                                    <li><a href="#">Handbags</a></li>
+                                    <li><a href="#">Sunglasses</a></li>
+                                    <li><a href="#">Scarves</a></li>
+                                    <li><a href="#">Belts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Collections</h4>
+                                <ul>
+                                    <li><a href="#">Bridal Collection</a></li>
+                                    <li><a href="#">Luxury Collection</a></li>
+                                    <li><a href="#">Everyday Elegance</a></li>
+                                    <li><a href="#">Statement Pieces</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Necklaces</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>By Type</h4>
+                                <ul>
+                                    <li><a href="#">Pendant Necklaces</a></li>
+                                    <li><a href="#">Choker Necklaces</a></li>
+                                    <li><a href="#">Statement Necklaces</a></li>
+                                    <li><a href="#">Layered Necklaces</a></li>
+                                    <li><a href="#">Pearl Necklaces</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Material</h4>
+                                <ul>
+                                    <li><a href="#">Gold Necklaces</a></li>
+                                    <li><a href="#">Silver Necklaces</a></li>
+                                    <li><a href="#">Diamond Necklaces</a></li>
+                                    <li><a href="#">Gemstone Necklaces</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Length</h4>
+                                <ul>
+                                    <li><a href="#">Choker (14-16")</a></li>
+                                    <li><a href="#">Princess (17-19")</a></li>
+                                    <li><a href="#">Matinee (20-24")</a></li>
+                                    <li><a href="#">Opera (28-34")</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Rings</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>By Type</h4>
+                                <ul>
+                                    <li><a href="#">Engagement Rings</a></li>
+                                    <li><a href="#">Wedding Rings</a></li>
+                                    <li><a href="#">Statement Rings</a></li>
+                                    <li><a href="#">Stackable Rings</a></li>
+                                    <li><a href="#">Cocktail Rings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Material</h4>
+                                <ul>
+                                    <li><a href="#">Gold Rings</a></li>
+                                    <li><a href="#">Silver Rings</a></li>
+                                    <li><a href="#">Platinum Rings</a></li>
+                                    <li><a href="#">Titanium Rings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>By Stone</h4>
+                                <ul>
+                                    <li><a href="#">Diamond Rings</a></li>
+                                    <li><a href="#">Sapphire Rings</a></li>
+                                    <li><a href="#">Ruby Rings</a></li>
+                                    <li><a href="#">Emerald Rings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Earrings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Bracelets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Watches</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Perfumes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-light);">
+                <a href="index.html">Home</a> / 
+                <a href="collection.html">Necklaces</a> / 
+                <a href="#">Diamond Necklaces</a> / 
+                <span style="color: var(--teal);">Eternal Diamond Necklace</span>
+            </div>
+            
+            <div class="product-details-container">
+                <div class="product-gallery">
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80" alt="Eternal Diamond Necklace Front">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eternal Diamond Necklace Side">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eternal Diamond Necklace Back">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Eternal Diamond Necklace Close-up">
+                        </div>
+                    </div>
+                    <div class="product-main-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80" alt="Eternal Diamond Necklace">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-header">
+                        <div class="product-category">Necklaces / Diamond Collection</div>
+                        <h1 class="product-title">Eternal Diamond Necklace</h1>
+                        <div class="product-rating-large">
+                            <div class="stars">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star-half-alt filled"></i>
+                            </div>
+                            <span class="rating-count-large">(42 Reviews)</span>
+                        </div>
+                        <div class="product-price-large">
+                            <span class="current-price-large">KES 89,500</span>
+                            <span class="original-price-large">KES 105,000</span>
+                            <span class="discount-large">15% OFF</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>Experience timeless elegance with our Eternal Diamond Necklace. Expertly crafted with ethically sourced diamonds set in premium 18K white gold, this piece embodies sophistication and luxury.</p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="product-option">
+                            <h4>Material</h4>
+                            <div class="option-values">
+                                <div class="option-value selected">18K White Gold</div>
+                                <div class="option-value">18K Yellow Gold</div>
+                                <div class="option-value">Platinum</div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-option">
+                            <h4>Chain Length</h4>
+                            <div class="option-values">
+                                <div class="option-value selected">16" (Choker)</div>
+                                <div class="option-value">18" (Princess)</div>
+                                <div class="option-value">20" (Matinee)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-option">
+                            <h4>Diamond Quality</h4>
+                            <div class="option-values">
+                                <div class="option-value selected">VS1 Clarity</div>
+                                <div class="option-value">VS2 Clarity</div>
+                                <div class="option-value">VVS1 Clarity</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <h4>Quantity</h4>
+                        <div class="quantity-controls-large">
+                            <button class="quantity-btn-large">-</button>
+                            <input type="text" class="quantity-input-large" value="1" readonly>
+                            <button class="quantity-btn-large">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart-large">Add to Cart</button>
+                        <button class="btn buy-now-btn">Buy Now</button>
+                        <button class="wishlist-btn-large">
+                            <i class="far fa-heart"></i>
+                            <span>Add to Wishlist</span>
+                        </button>
+                    </div>
+                    
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2-Year Warranty Included</span>
+                        </div>
+                        <div class="product-feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Free Shipping & Returns</span>
+                        </div>
+                        <div class="product-feature">
+                            <i class="fas fa-gem"></i>
+                            <span>Ethically Sourced Diamonds</span>
+                        </div>
+                        <div class="product-feature">
+                            <i class="fas fa-award"></i>
+                            <span>Certified Authenticity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-details-tabs">
+                <div class="tab-headers">
+                    <div class="tab-header active" data-tab="description">Description</div>
+                    <div class="tab-header" data-tab="details">Product Details</div>
+                    <div class="tab-header" data-tab="shipping">Shipping & Returns</div>
+                    <div class="tab-header" data-tab="reviews">Reviews (42)</div>
+                </div>
+                
+                <div class="tab-content active" id="description">
+                    <h3>Eternal Diamond Necklace</h3>
+                    <p>Our Eternal Diamond Necklace is a masterpiece of jewelry craftsmanship, designed for those who appreciate the finer things in life. Each diamond is meticulously selected for its brilliance and clarity, then set by our expert artisans to create a piece that will be cherished for generations.</p>
+                    
+                    <p>The necklace features a elegant pendant design with a central diamond surrounded by smaller accent stones, all set in your choice of premium 18K gold or platinum. The adjustable chain allows for versatile styling, making it perfect for both everyday elegance and special occasions.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul style="padding-left: 20px; margin-bottom: 20px;">
+                        <li>Ethically sourced conflict-free diamonds</li>
+                        <li>Premium 18K gold or platinum setting</li>
+                        <li>Expert craftsmanship with attention to detail</li>
+                        <li>Adjustable chain length for perfect fit</li>
+                        <li>Comes with certification of authenticity</li>
+                        <li>Includes luxury gift packaging</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="details">
+                    <h3>Product Specifications</h3>
+                    <div class="details-list">
+                        <div class="detail-item">
+                            <span class="detail-label">Material</span>
+                            <span class="detail-value">18K White Gold</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Diamond Carat</span>
+                            <span class="detail-value">1.5 CTW</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Diamond Clarity</span>
+                            <span class="detail-value">VS1</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Diamond Color</span>
+                            <span class="detail-value">G-H</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Chain Length</span>
+                            <span class="detail-value">16" - 20" adjustable</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Clasp Type</span>
+                            <span class="detail-value">Spring Ring</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Origin</span>
+                            <span class="detail-value">Handcrafted in Italy</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Warranty</span>
+                            <span class="detail-value">2 Years</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <p>We offer free standard shipping on all orders within Kenya. Express shipping options are available at an additional cost.</p>
+                    
+                    <h3>Delivery Times</h3>
+                    <ul style="padding-left: 20px; margin-bottom: 20px;">
+                        <li><strong>Standard Shipping:</strong> 3-5 business days</li>
+                        <li><strong>Express Shipping:</strong> 1-2 business days</li>
+                        <li><strong>International Shipping:</strong> 7-14 business days</li>
+                    </ul>
+                    
+                    <h3>Returns Policy</h3>
+                    <p>We want you to be completely satisfied with your purchase. If for any reason you are not happy with your jewelry, you may return it within 30 days of receipt for a full refund or exchange.</p>
+                    
+                    <p>Items must be returned in their original condition with all tags and packaging intact. Custom or personalized items cannot be returned unless there is a manufacturing defect.</p>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <h4>Sarah K.</h4>
+                                    <div class="review-date">March 15, 2023</div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <p>Absolutely stunning necklace! The craftsmanship is exceptional and the diamonds sparkle beautifully. I've received so many compliments since I started wearing it. Worth every penny!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <h4>Michael T.</h4>
+                                    <div class="review-date">February 28, 2023</div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star-half-alt filled"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <p>Bought this for my wife's anniversary and she absolutely loves it. The quality is outstanding and it arrived beautifully packaged. The adjustable chain is a nice feature.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <h4>Grace W.</h4>
+                                    <div class="review-date">January 10, 2023</div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <p>Beautiful necklace, but the clasp is a bit tricky to fasten by myself. Otherwise, I'm very happy with the purchase and the customer service was excellent.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-outline" style="margin-top: 20px;">Load More Reviews</button>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="products-scroll-container">
+                    <div class="products-scroll">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-badge new">New</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gold Hoop Earrings">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Gold Hoop Earrings</h3>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star-half-alt filled"></i>
+                                    </div>
+                                    <span class="rating-count">(27)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">KES 45,000</span>
+                                    <span class="original-price">KES 60,000</span>
+                                    <span class="discount">25% OFF</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-badge bestseller">Bestseller</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1596944946755-85932a1a4e6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Silver Diamond Ring">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Silver Diamond Ring</h3>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(34)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">KES 78,500</span>
+                                    <span class="original-price">KES 95,000</span>
+                                    <span class="discount">17% OFF</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-badge trending">Trending</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Pearl Necklace">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Pearl Necklace</h3>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                    </div>
+                                    <span class="rating-count">(18)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">KES 62,000</span>
+                                    <span class="original-price">KES 85,000</span>
+                                    <span class="discount">27% OFF</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-badge deal">Deal</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Rose Gold Bracelet">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Rose Gold Bracelet</h3>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star-half-alt filled"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(22)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">KES 55,000</span>
+                                    <span class="original-price">KES 70,000</span>
+                                    <span class="discount">21% OFF</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-indicator">
+                        <i class="fas fa-chevron-left"></i>
+                        Scroll for more
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>House of LUBO</h3>
+                    <p>Creating timeless pieces that celebrate elegance and craftsmanship since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Jewelry</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> The Village Market, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@houseoflubo.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM, Sun: 11AM - 6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 House of LUBO. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <span>Visa</span>
+                        <span>MasterCard</span>
+                        <span>PayPal</span>
+                        <span>M-Pesa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product Details Page JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Thumbnail click functionality
+            const thumbnails = document.querySelectorAll('.product-thumbnail');
+            const mainImage = document.querySelector('.product-main-image img');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Remove active class from all thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked thumbnail
+                    this.classList.add('active');
+                    
+                    // Update main image
+                    const newSrc = this.querySelector('img').src;
+                    mainImage.src = newSrc;
+                });
+            });
+            
+            // Option selection
+            const optionValues = document.querySelectorAll('.option-value:not(.disabled)');
+            
+            optionValues.forEach(option => {
+                option.addEventListener('click', function() {
+                    const parent = this.closest('.product-option');
+                    const options = parent.querySelectorAll('.option-value');
+                    
+                    // Remove selected class from all options in this group
+                    options.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Quantity controls
+            const quantityBtns = document.querySelectorAll('.quantity-btn-large');
+            const quantityInput = document.querySelector('.quantity-input-large');
+            
+            quantityBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    let value = parseInt(quantityInput.value);
+                    
+                    if (this.textContent === '+') {
+                        value++;
+                    } else if (this.textContent === '-' && value > 1) {
+                        value--;
+                    }
+                    
+                    quantityInput.value = value;
+                });
+            });
+            
+            // Tab functionality
+            const tabHeaders = document.querySelectorAll('.tab-header');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all headers and contents
+                    tabHeaders.forEach(h => h.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked header and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Add to cart functionality
+            const addToCartBtn = document.querySelector('.add-to-cart-large');
+            const buyNowBtn = document.querySelector('.buy-now-btn');
+            const wishlistBtn = document.querySelector('.wishlist-btn-large');
+            
+            addToCartBtn.addEventListener('click', function() {
+                const productTitle = document.querySelector('.product-title').textContent;
+                const productPrice = document.querySelector('.current-price-large').textContent;
+                const quantity = parseInt(quantityInput.value);
+                
+                // Update cart count in header
+                const cartCount = document.querySelector('.cart-count');
+                if (cartCount) {
+                    let count = parseInt(cartCount.textContent);
+                    cartCount.textContent = count + quantity;
+                }
+                
+                // Show notification
+                showNotification(`Added ${quantity} x ${productTitle} to cart!`);
+                
+                // Add animation to cart icon
+                const cartIcon = document.querySelector('.fa-shopping-bag').closest('.action-item');
+                cartIcon.classList.add('pulse');
+                setTimeout(() => {
+                    cartIcon.classList.remove('pulse');
+                }, 1000);
+            });
+            
+            // Buy now functionality
+            buyNowBtn.addEventListener('click', function() {
+                const productTitle = document.querySelector('.product-title').textContent;
+                
+                // Update cart count in header
+                const cartCount = document.querySelector('.cart-count');
+                if (cartCount) {
+                    let count = parseInt(cartCount.textContent);
+                    cartCount.textContent = count + 1;
+                }
+                
+                // Redirect to cart page
+                window.location.href = 'cart.html';
+            });
+            
+            // Wishlist functionality
+            wishlistBtn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                const productTitle = document.querySelector('.product-title').textContent;
+                
+                if (icon.classList.contains('far')) {
+                    // Add to wishlist
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    this.classList.add('active');
+                    
+                    // Update wishlist count in header
+                    const wishlistCount = document.querySelector('.wishlist-count');
+                    if (wishlistCount) {
+                        let count = parseInt(wishlistCount.textContent);
+                        wishlistCount.textContent = count + 1;
+                    }
+                    
+                    // Show notification
+                    showNotification(`Added ${productTitle} to wishlist!`);
+                } else {
+                    // Remove from wishlist
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.classList.remove('active');
+                    
+                    // Update wishlist count in header
+                    const wishlistCount = document.querySelector('.wishlist-count');
+                    if (wishlistCount) {
+                        let count = parseInt(wishlistCount.textContent);
+                        wishlistCount.textContent = count - 1;
+                    }
+                    
+                    // Show notification
+                    showNotification(`Removed ${productTitle} from wishlist!`);
+                }
+            });
+            
+            // Related products scroll
+            const productsScroll = document.querySelector('.products-scroll');
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            
+            if (productsScroll && scrollIndicator) {
+                // Hide scroll indicator after first scroll
+                productsScroll.addEventListener('scroll', () => {
+                    if (productsScroll.scrollLeft > 10) {
+                        scrollIndicator.style.opacity = '0';
+                    }
+                });
+            }
+            
+            // Notification function
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-check-circle"></i>
+                        <span>${message}</span>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

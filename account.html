@@ -14,8 +14,33 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo" onclick="window.location.href='index.html'">
-                    <img src="lubo logo.jpg" alt="" class="logo">
+                    
                 </div>                
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search collections...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-item">
+                        <i class="fas fa-user" onclick="window.location.href='account.html'"></i>
+                        <span class="action-text">Account</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-heart" onclick="window.location.href='account.html'"></i>
+                        <span class="action-text">Wishlist</span>
+                        <span class="wishlist-count">3</span>
+                    </div>
+                    <div class="action-item" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="action-text">Cart</span>
+                        <span class="cart-count">2</span>
+                    </div>
+                </div>
+                
                 <div class="mobile-menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -27,27 +52,23 @@
     <div class="page-nav">
         <div class="container">
             <div class="page-nav-content">
-                <div class="page-nav-item">
+                <div class="page-nav-item" onclick="window.location.href='index.html'">
                     <i class="fas fa-home"></i>
                     <span class="page-nav-text">Home</span>
                 </div>
-                <div class="page-nav-item">
+                <div class="page-nav-item" onclick="window.location.href='trending.html'">
                     <i class="fas fa-fire"></i>
                     <span class="page-nav-text">Trending</span>
                 </div>
-                <div class="page-nav-item">
+                <div class="page-nav-item" onclick="window.location.href='deals.html'">
                     <i class="fas fa-tag"></i>
                     <span class="page-nav-text">Deals</span>
                 </div>
-                <div class="page-nav-item">
+                <div class="page-nav-item" onclick="window.location.href = 'collection.html'">
                     <i class="fas fa-star"></i>
                     <span class="page-nav-text">Collections</span>
                 </div>
-                <div class="page-nav-item">
-                    <i class="fas fa-gift"></i>
-                    <span class="page-nav-text">Gifts</span>
-                </div>
-                <div class="page-nav-item">
+                <div class="page-nav-item" onclick="window.location.href = 'about.html'">
                     <i class="fas fa-info-circle"></i>
                     <span class="page-nav-text">About</span>
                 </div>

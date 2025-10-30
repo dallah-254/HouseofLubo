@@ -258,6 +258,9 @@ ul {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .page-nav-item {
@@ -454,6 +457,9 @@ ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
+    
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .nav-item {

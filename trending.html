@@ -6,7 +6,7 @@
     <title>Trending - House of LUBO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="trending-deals-collections.css">
+    <link rel="stylesheet" href="t-d-coll.css">
 </head>
 <body>
     <!-- Header -->
@@ -14,11 +14,11 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo" onclick="window.location.href='index.html'">
-                    <img src="lubo-logo.jpg" alt="House of LUBO" class="logo">
+                    
                 </div>                
                 
                 <div class="search-bar">
-                    <input type="text" placeholder="Search for trending jewelry...">
+                    <input type="text" placeholder="Search collections...">
                     <button class="search-btn">
                         <i class="fas fa-search"></i>
                     </button>
@@ -30,11 +30,11 @@
                         <span class="action-text">Account</span>
                     </div>
                     <div class="action-item">
-                        <i class="fas fa-heart" onclick="window.location.href='wishlist.html'"></i>
+                        <i class="fas fa-heart" onclick="window.location.href='account.html'"></i>
                         <span class="action-text">Wishlist</span>
                         <span class="wishlist-count">3</span>
                     </div>
-                    <div class="action-item">
+                    <div class="action-item" onclick="window.location.href='cart.html'">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="action-text">Cart</span>
                         <span class="cart-count">2</span>
@@ -56,7 +56,7 @@
                     <i class="fas fa-home"></i>
                     <span class="page-nav-text">Home</span>
                 </div>
-                <div class="page-nav-item active">
+                <div class="page-nav-item active" onclick="window.location.href='trending.html'">
                     <i class="fas fa-fire"></i>
                     <span class="page-nav-text">Trending</span>
                 </div>
@@ -64,15 +64,11 @@
                     <i class="fas fa-tag"></i>
                     <span class="page-nav-text">Deals</span>
                 </div>
-                <div class="page-nav-item" onclick="window.location.href='collections.html'">
+                <div class="page-nav-item" onclick="window.location.href = 'collection.html'">
                     <i class="fas fa-star"></i>
                     <span class="page-nav-text">Collections</span>
                 </div>
-                <div class="page-nav-item">
-                    <i class="fas fa-gift"></i>
-                    <span class="page-nav-text">Gifts</span>
-                </div>
-                <div class="page-nav-item">
+                <div class="page-nav-item" onclick="window.location.href = 'about.html'">
                     <i class="fas fa-info-circle"></i>
                     <span class="page-nav-text">About</span>
                 </div>
@@ -122,6 +118,9 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">Watches</a>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Perfumes</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -129,11 +128,6 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Page Header -->
-            <div class="page-header">
-                <h1>Trending Now</h1>
-                <p>Discover the most sought-after jewelry pieces that are capturing hearts this season</p>
-            </div>
 
             <!-- Trending Stats -->
             <div class="filter-section">
